@@ -15,7 +15,7 @@ from resources import views as resources_views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", analytics_views.dashboard, name="dashboard"),
-    path("accounts/login/", auth_views.LoginView.as_view(template_name="accounts/login.html"), name="login"),
+    path("accounts/login/", auth_views.LoginView.as_view(template_name="accounts/login.html", redirect_authenticated_user=True), name="login"),
     path("accounts/logout/", auth_views.LogoutView.as_view(), name="logout"),
     path("accounts/signup/", accounts_views.signup, name="signup"),
     path("cloud-accounts/", cloud_views.account_list, name="cloud_accounts"),

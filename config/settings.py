@@ -36,6 +36,10 @@ if RENDER_EXTERNAL_HOSTNAME:
 CSRF_COOKIE_NAME = "cloudcost_csrftoken"
 SESSION_COOKIE_NAME = "cloudcost_sessionid"
 
+# A stale form (double submit, or a page left open across a sign-in) is sent
+# back to a fresh page instead of a bare 403. The request is still rejected.
+CSRF_FAILURE_VIEW = "accounts.views.csrf_failure"
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",

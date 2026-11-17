@@ -3,7 +3,7 @@ from datetime import date
 
 from django.contrib.auth import get_user_model
 from django.core.files.uploadedfile import SimpleUploadedFile
-from django.test import Client
+from django.test import Client, TestCase
 from django.urls import reverse
 
 from alerts.models import CostAnomaly
@@ -153,3 +153,73 @@ class AccessTests(ImportTestCase):
         self.assertEqual(response.status_code, 302)
         self.assertTrue(get_user_model().objects.filter(username="carol").exists())
         self.assertEqual(self.client.get(reverse("dashboard")).status_code, 200)
+
+
+class CsrfFailureTests(TestCase):
+    """A stale or missing CSRF token never shows a bare 403 and never runs the post."""
+
+    def setUp(self):
+        self.password = "pw-for-csrf-tests-7"
+        self.user = get_user_model().objects.create_user("dana", password=self.password)
+        self.client = Client(enforce_csrf_checks=True, HTTP_HOST="localhost")
+
+    def _login_form_token(self):
+        response = self.client.get(reverse("login"))
+        return response.context["csrf_token"]
+
+    def test_second_submit_of_the_sign_in_form_lands_in_the_app(self):
+        token = str(self._login_form_token())
+        data = {"username": "dana", "password": self.password, "csrfmiddlewaretoken": token}
+        url = reverse("login") + "?next=/"
+        first = self.client.post(url, data)
+        self.assertEqual(first.status_code, 302)
+        self.assertEqual(first["Location"], "/")
+        # Same form again: the token was rotated by the first sign-in.
+        second = self.client.post(url, data)
+        self.assertEqual(second.status_code, 302)
+        self.assertEqual(second["Location"], "/")
+        self.assertEqual(self.client.get(reverse("dashboard")).status_code, 200)
+
+    def test_bad_token_when_signed_out_returns_to_sign_in(self):
+        self.client.get(reverse("login"))
+        response = self.client.post(
+            reverse("login") + "?next=/forecast/",
+            {"username": "dana", "password": self.password, "csrfmiddlewaretoken": "wrong"},
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(response["Location"].startswith(reverse("login")))
+        self.assertIn("next=%2Fforecast%2F", response["Location"])
+        # Not signed in: the rejected post was not processed.
+        self.assertEqual(self.client.get(reverse("dashboard")).status_code, 302)
+        page = self.client.get(response["Location"])
+        self.assertContains(page, "Please sign in again")
+
+    def test_unsafe_next_is_dropped(self):
+        response = self.client.post(
+            reverse("login") + "?next=https://evil.example/",
+            {"username": "dana", "password": self.password, "csrfmiddlewaretoken": "wrong"},
+        )
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response["Location"], reverse("login"))
+
+    def test_signed_in_user_skips_the_sign_in_page(self):
+        self.client.force_login(self.user)
+        response = self.client.get(reverse("login"))
+        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response["Location"], reverse("dashboard"))
+
+    def test_stale_form_elsewhere_is_rejected_without_changes(self):
+        self.client.force_login(self.user)
+        anomaly = CostAnomaly.objects.create(
+            user=self.user, provider="aws", service="EC2",
+            usage_date=date(2026, 7, 20), observed_cost=50, expected_cost=10,
+            deviation=40, deviation_pct=400, method="pct_threshold", explanation="x",
+        )
+        response = self.client.post(
+            reverse("anomaly_status", args=[anomaly.pk]),
+            {"status": "dismissed", "csrfmiddlewaretoken": "wrong"},
+        )
+        self.assertEqual(response.status_code, 302)
+        anomaly.refresh_from_db()
+        self.assertEqual(anomaly.status, "open")
+        self.assertContains(self.client.get(reverse("anomalies")), "nothing was changed")

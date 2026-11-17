@@ -53,11 +53,36 @@
 <main class="auth">
   <a class="brand" href="{% url 'login' %}">CloudCost <span>AI</span></a>
   <div class="card auth-card">
+    {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+          <p class="message {{ message.tags }}" role="status">{% if message.tags == 'error' %}⚠{% else %}✓{% endif %} {{ message }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
     {% block auth %}{% endblock %}
   </div>
 </main>
 {% endif %}
 {% endwith %}
+<script>
+  // Stop a second click or Enter from sending the same form twice.
+  document.addEventListener("submit", function (event) {
+    var form = event.target;
+    if (form.dataset.submitting) { event.preventDefault(); return; }
+    form.dataset.submitting = "1";
+    setTimeout(function () {
+      form.querySelectorAll("button[type=submit], input[type=submit]").forEach(function (b) { b.disabled = true; });
+    }, 0);
+  });
+  // A page restored from the back/forward cache must be usable again.
+  window.addEventListener("pageshow", function () {
+    document.querySelectorAll("form[data-submitting]").forEach(function (form) {
+      delete form.dataset.submitting;
+      form.querySelectorAll("button[type=submit], input[type=submit]").forEach(function (b) { b.disabled = false; });
+    });
+  });
+</script>
 {% block scripts %}{% endblock %}
 </body>
 </html>
