@@ -1,0 +1,33 @@
+# CloudQuery: read-only resource inventory (NOT billing data).
+#
+#   cloudquery sync infra/cloudquery/aws.yml
+#
+# then upload the JSON files written to cloudquery-output/ on the
+# Resources -> Import inventory page.
+#
+# Credentials: CloudQuery uses the standard AWS credential chain (AWS_PROFILE
+# or environment variables). Use an IAM identity with the AWS managed
+# ReadOnlyAccess policy (or narrower). Never put keys in this file.
+# Replace the versions below with the current releases from hub.cloudquery.io.
+kind: source
+spec:
+  name: aws
+  path: cloudquery/aws
+  registry: cloudquery
+  version: "vX.Y.Z" # pin to a released version
+  tables:
+    - aws_ec2_instances
+    - aws_ec2_ebs_volumes
+    - aws_s3_buckets
+    - aws_rds_instances
+  destinations: ["file"]
+---
+kind: destination
+spec:
+  name: file
+  path: cloudquery/file
+  registry: cloudquery
+  version: "vX.Y.Z" # pin to a released version
+  spec:
+    path: "cloudquery-output/{{TABLE}}.json"
+    format: json

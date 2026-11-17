@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load cc_extras %}
+{% block title %}{{ estimate.name }} · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>{{ estimate.name }} <span class="badge">estimate</span></h1>
+    <p class="muted">From {{ estimate.source_file }} · uploaded {{ estimate.created_at|date:"j M Y" }}</p>
+  </div>
+  <a class="btn" href="{% url 'estimates' %}">All estimates</a>
+</header>
+<p class="notice">This is an Infracost estimate of planned Terraform resources at list prices. It is not actual billing and usage-based charges may be missing.</p>
+<section class="kpis">
+  <div class="kpi">
+    <p class="kpi-label">Estimated monthly cost</p>
+    <p class="kpi-value">{{ estimate.total_monthly_cost|money:estimate.currency }}</p>
+    <p class="kpi-sub">{{ estimate.breakdown|length }} resource{{ estimate.breakdown|length|pluralize }}</p>
+  </div>
+</section>
+<section class="card">
+  <h2>Resources</h2>
+  {% if estimate.breakdown %}
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Resource</th><th>Component</th><th class="num">Quantity</th><th>Unit</th><th class="num">Est. monthly cost</th></tr></thead>
+        <tbody>
+          {% for resource in estimate.breakdown %}
+            <tr class="group-row">
+              <td><strong>{{ resource.name }}</strong><br><span class="muted small">{{ resource.resource_type }}{% if resource.project %} · {{ resource.project }}{% endif %}</span></td>
+              <td></td><td></td><td></td>
+              <td class="num"><strong>{{ resource.monthly_cost|money:estimate.currency }}</strong></td>
+            </tr>
+            {% for component in resource.components %}
+              <tr>
+                <td></td>
+                <td>{{ component.name }}</td>
+                <td class="num">{{ component.quantity|default_if_none:"—" }}</td>
+                <td>{{ component.unit }}</td>
+                <td class="num">{{ component.monthly_cost|money:estimate.currency }}</td>
+              </tr>
+            {% endfor %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="muted">The estimate contains no priced resources.</p>
+  {% endif %}
+</section>
+{% endblock %}

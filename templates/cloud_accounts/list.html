@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load cc_extras humanize %}
+{% block title %}Cloud accounts · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Cloud accounts</h1>
+    <p class="muted">Labels for the accounts your billing exports come from. No credentials are stored, and nothing in your cloud is ever changed.</p>
+  </div>
+  <a class="btn btn-primary" href="{% url 'cloud_account_add' %}">Add account</a>
+</header>
+<section class="card">
+  {% if accounts %}
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Provider</th><th>Name</th><th>Identifier</th><th>Status</th><th class="num">Billing rows</th><th>Added</th></tr></thead>
+        <tbody>
+          {% for account in accounts %}
+            <tr>
+              <td><span class="swatch {{ account.provider }}"></span>{{ account.provider|provider_label }}</td>
+              <td>{{ account.account_name }}</td>
+              <td class="mono">{{ account.account_identifier }}</td>
+              <td>{{ account.get_connection_status_display }}</td>
+              <td class="num">{{ account.record_count|intcomma }}</td>
+              <td>{{ account.created_at|date:"j M Y" }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="empty">
+      <h2>No cloud accounts yet</h2>
+      <p class="muted">Add one for each AWS account, Azure subscription or Google Cloud billing account you want to track.</p>
+    </div>
+  {% endif %}
+</section>
+{% endblock %}

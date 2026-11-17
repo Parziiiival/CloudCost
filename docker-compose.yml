@@ -1,0 +1,79 @@
+# Local stack: PostgreSQL + the Django app.
+# Optional extras:  docker compose --profile kestra --profile grafana up
+#
+# Every secret comes from the environment (.env next to this file, which is
+# git-ignored). Nothing here contains a password.
+
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: cloudcost
+      POSTGRES_USER: cloudcost
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cloudcost -d cloudcost"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  web:
+    build: .
+    image: cloudcost-ai:local
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?set DJANGO_SECRET_KEY in .env}
+      DJANGO_DEBUG: "false"
+      DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS:-localhost,127.0.0.1}
+      DJANGO_CSRF_TRUSTED_ORIGINS: ${DJANGO_CSRF_TRUSTED_ORIGINS:-http://localhost:8000}
+      # Plain http on localhost. Remove (or set true) behind an HTTPS proxy.
+      DJANGO_SECURE_COOKIES: ${DJANGO_SECURE_COOKIES:-false}
+      DATABASE_URL: postgres://cloudcost:${POSTGRES_PASSWORD}@db:5432/cloudcost
+      DEMO_USER_PASSWORD: ${DEMO_USER_PASSWORD:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-2.5-flash}
+    ports:
+      - "8000:8000"
+
+  kestra:
+    profiles: ["kestra"]
+    image: kestra/kestra:latest
+    command: server local
+    user: root
+    environment:
+      # Read by the flow in infra/kestra/ so the scheduled job can reach the database.
+      ENV_DATABASE_URL: postgres://cloudcost:${POSTGRES_PASSWORD}@db:5432/cloudcost
+      ENV_DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY}
+    volumes:
+      - kestra-data:/app/storage
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./infra/kestra:/flows:ro
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  grafana:
+    profiles: ["grafana"]
+    image: grafana/grafana-oss:latest
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?set GRAFANA_ADMIN_PASSWORD in .env}
+      CLOUDCOST_DB_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./infra/grafana/provisioning:/etc/grafana/provisioning:ro
+      - grafana-data:/var/lib/grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+  kestra-data:
+  grafana-data:

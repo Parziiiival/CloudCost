@@ -1,0 +1,841 @@
+billing_account_id,project.id,service.description,resource.name,location.region,usage_start_time,usage_end_time,usage.amount,usage.unit,cost,currency
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-20 00:00:00 UTC,2026-07-21 00:00:00 UTC,86400,seconds,53.6052,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-20 00:00:00 UTC,2026-07-21 00:00:00 UTC,86400,seconds,49.7672,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-20 00:00:00 UTC,2026-07-21 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-20 00:00:00 UTC,2026-07-21 00:00:00 UTC,86400,byte-seconds,15.0199,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-20 00:00:00 UTC,2026-07-21 00:00:00 UTC,86400,bytes,34.8488,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-20 00:00:00 UTC,2026-07-21 00:00:00 UTC,86400,seconds,36.3194,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-20 00:00:00 UTC,2026-07-21 00:00:00 UTC,86400,seconds,43.8345,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-21 00:00:00 UTC,2026-07-22 00:00:00 UTC,86400,seconds,53.596,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-21 00:00:00 UTC,2026-07-22 00:00:00 UTC,86400,seconds,51.1164,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-21 00:00:00 UTC,2026-07-22 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-21 00:00:00 UTC,2026-07-22 00:00:00 UTC,86400,byte-seconds,14.8439,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-21 00:00:00 UTC,2026-07-22 00:00:00 UTC,86400,bytes,36.4687,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-21 00:00:00 UTC,2026-07-22 00:00:00 UTC,86400,seconds,38.9341,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-21 00:00:00 UTC,2026-07-22 00:00:00 UTC,86400,seconds,44.3446,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-22 00:00:00 UTC,2026-07-23 00:00:00 UTC,86400,seconds,49.6355,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-22 00:00:00 UTC,2026-07-23 00:00:00 UTC,86400,seconds,49.2226,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-22 00:00:00 UTC,2026-07-23 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-22 00:00:00 UTC,2026-07-23 00:00:00 UTC,86400,byte-seconds,14.3456,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-22 00:00:00 UTC,2026-07-23 00:00:00 UTC,86400,bytes,37.4677,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-22 00:00:00 UTC,2026-07-23 00:00:00 UTC,86400,seconds,39.6514,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-22 00:00:00 UTC,2026-07-23 00:00:00 UTC,86400,seconds,42.1037,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-23 00:00:00 UTC,2026-07-24 00:00:00 UTC,86400,seconds,54.2556,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-23 00:00:00 UTC,2026-07-24 00:00:00 UTC,86400,seconds,47.6587,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-23 00:00:00 UTC,2026-07-24 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-23 00:00:00 UTC,2026-07-24 00:00:00 UTC,86400,byte-seconds,14.8633,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-23 00:00:00 UTC,2026-07-24 00:00:00 UTC,86400,bytes,37.0305,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-23 00:00:00 UTC,2026-07-24 00:00:00 UTC,86400,seconds,39.0101,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-23 00:00:00 UTC,2026-07-24 00:00:00 UTC,86400,seconds,46.1047,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-24 00:00:00 UTC,2026-07-25 00:00:00 UTC,86400,seconds,52.7586,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-24 00:00:00 UTC,2026-07-25 00:00:00 UTC,86400,seconds,49.6018,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-24 00:00:00 UTC,2026-07-25 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-24 00:00:00 UTC,2026-07-25 00:00:00 UTC,86400,byte-seconds,15.7393,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-24 00:00:00 UTC,2026-07-25 00:00:00 UTC,86400,bytes,35.9931,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-24 00:00:00 UTC,2026-07-25 00:00:00 UTC,86400,seconds,39.4046,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-24 00:00:00 UTC,2026-07-25 00:00:00 UTC,86400,seconds,45.7898,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-25 00:00:00 UTC,2026-07-26 00:00:00 UTC,86400,seconds,43.6504,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-25 00:00:00 UTC,2026-07-26 00:00:00 UTC,86400,seconds,43.2766,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-25 00:00:00 UTC,2026-07-26 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-25 00:00:00 UTC,2026-07-26 00:00:00 UTC,86400,byte-seconds,12.9563,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-25 00:00:00 UTC,2026-07-26 00:00:00 UTC,86400,bytes,31.3904,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-25 00:00:00 UTC,2026-07-26 00:00:00 UTC,86400,seconds,32.7959,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-25 00:00:00 UTC,2026-07-26 00:00:00 UTC,86400,seconds,36.8307,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-26 00:00:00 UTC,2026-07-27 00:00:00 UTC,86400,seconds,42.7789,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-26 00:00:00 UTC,2026-07-27 00:00:00 UTC,86400,seconds,42.6583,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-26 00:00:00 UTC,2026-07-27 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-26 00:00:00 UTC,2026-07-27 00:00:00 UTC,86400,byte-seconds,12.7868,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-26 00:00:00 UTC,2026-07-27 00:00:00 UTC,86400,bytes,32.2998,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-26 00:00:00 UTC,2026-07-27 00:00:00 UTC,86400,seconds,31.4043,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-26 00:00:00 UTC,2026-07-27 00:00:00 UTC,86400,seconds,35.543,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-27 00:00:00 UTC,2026-07-28 00:00:00 UTC,86400,seconds,49.5182,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-27 00:00:00 UTC,2026-07-28 00:00:00 UTC,86400,seconds,48.9918,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-27 00:00:00 UTC,2026-07-28 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-27 00:00:00 UTC,2026-07-28 00:00:00 UTC,86400,byte-seconds,15.2602,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-27 00:00:00 UTC,2026-07-28 00:00:00 UTC,86400,bytes,37.6915,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-27 00:00:00 UTC,2026-07-28 00:00:00 UTC,86400,seconds,38.1213,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-27 00:00:00 UTC,2026-07-28 00:00:00 UTC,86400,seconds,45.4228,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-28 00:00:00 UTC,2026-07-29 00:00:00 UTC,86400,seconds,50.6871,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-28 00:00:00 UTC,2026-07-29 00:00:00 UTC,86400,seconds,49.2308,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-28 00:00:00 UTC,2026-07-29 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-28 00:00:00 UTC,2026-07-29 00:00:00 UTC,86400,byte-seconds,14.6635,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-28 00:00:00 UTC,2026-07-29 00:00:00 UTC,86400,bytes,39.5578,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-28 00:00:00 UTC,2026-07-29 00:00:00 UTC,86400,seconds,38.8551,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-28 00:00:00 UTC,2026-07-29 00:00:00 UTC,86400,seconds,42.2965,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-29 00:00:00 UTC,2026-07-30 00:00:00 UTC,86400,seconds,53.6093,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-29 00:00:00 UTC,2026-07-30 00:00:00 UTC,86400,seconds,49.5962,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-29 00:00:00 UTC,2026-07-30 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-29 00:00:00 UTC,2026-07-30 00:00:00 UTC,86400,byte-seconds,15.3991,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-29 00:00:00 UTC,2026-07-30 00:00:00 UTC,86400,bytes,39.748,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-29 00:00:00 UTC,2026-07-30 00:00:00 UTC,86400,seconds,36.1595,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-29 00:00:00 UTC,2026-07-30 00:00:00 UTC,86400,seconds,42.7068,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-30 00:00:00 UTC,2026-07-31 00:00:00 UTC,86400,seconds,49.9247,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-30 00:00:00 UTC,2026-07-31 00:00:00 UTC,86400,seconds,47.6679,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-30 00:00:00 UTC,2026-07-31 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-30 00:00:00 UTC,2026-07-31 00:00:00 UTC,86400,byte-seconds,15.1467,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-30 00:00:00 UTC,2026-07-31 00:00:00 UTC,86400,bytes,39.4477,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-30 00:00:00 UTC,2026-07-31 00:00:00 UTC,86400,seconds,36.285,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-30 00:00:00 UTC,2026-07-31 00:00:00 UTC,86400,seconds,45.0584,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-07-31 00:00:00 UTC,2026-08-01 00:00:00 UTC,86400,seconds,51.4918,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-07-31 00:00:00 UTC,2026-08-01 00:00:00 UTC,86400,seconds,48.6717,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-07-31 00:00:00 UTC,2026-08-01 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-07-31 00:00:00 UTC,2026-08-01 00:00:00 UTC,86400,byte-seconds,14.5759,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-07-31 00:00:00 UTC,2026-08-01 00:00:00 UTC,86400,bytes,40.4687,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-07-31 00:00:00 UTC,2026-08-01 00:00:00 UTC,86400,seconds,36.3145,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-07-31 00:00:00 UTC,2026-08-01 00:00:00 UTC,86400,seconds,44.0171,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-01 00:00:00 UTC,2026-08-02 00:00:00 UTC,86400,seconds,43.2685,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-01 00:00:00 UTC,2026-08-02 00:00:00 UTC,86400,seconds,43.8421,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-01 00:00:00 UTC,2026-08-02 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-01 00:00:00 UTC,2026-08-02 00:00:00 UTC,86400,byte-seconds,13.0452,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-01 00:00:00 UTC,2026-08-02 00:00:00 UTC,86400,bytes,32.916,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-01 00:00:00 UTC,2026-08-02 00:00:00 UTC,86400,seconds,32.6163,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-01 00:00:00 UTC,2026-08-02 00:00:00 UTC,86400,seconds,38.0453,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-02 00:00:00 UTC,2026-08-03 00:00:00 UTC,86400,seconds,43.4073,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-02 00:00:00 UTC,2026-08-03 00:00:00 UTC,86400,seconds,41.6575,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-02 00:00:00 UTC,2026-08-03 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-02 00:00:00 UTC,2026-08-03 00:00:00 UTC,86400,byte-seconds,12.2952,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-02 00:00:00 UTC,2026-08-03 00:00:00 UTC,86400,bytes,34.4007,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-02 00:00:00 UTC,2026-08-03 00:00:00 UTC,86400,seconds,31.399,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-02 00:00:00 UTC,2026-08-03 00:00:00 UTC,86400,seconds,36.6539,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-03 00:00:00 UTC,2026-08-04 00:00:00 UTC,86400,seconds,49.717,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-03 00:00:00 UTC,2026-08-04 00:00:00 UTC,86400,seconds,52.2426,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-03 00:00:00 UTC,2026-08-04 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-03 00:00:00 UTC,2026-08-04 00:00:00 UTC,86400,byte-seconds,15.5696,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-03 00:00:00 UTC,2026-08-04 00:00:00 UTC,86400,bytes,41.8874,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-03 00:00:00 UTC,2026-08-04 00:00:00 UTC,86400,seconds,38.4788,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-03 00:00:00 UTC,2026-08-04 00:00:00 UTC,86400,seconds,43.6797,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-04 00:00:00 UTC,2026-08-05 00:00:00 UTC,86400,seconds,51.9772,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-04 00:00:00 UTC,2026-08-05 00:00:00 UTC,86400,seconds,52.3615,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-04 00:00:00 UTC,2026-08-05 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-04 00:00:00 UTC,2026-08-05 00:00:00 UTC,86400,byte-seconds,15.6624,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-04 00:00:00 UTC,2026-08-05 00:00:00 UTC,86400,bytes,41.3301,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-04 00:00:00 UTC,2026-08-05 00:00:00 UTC,86400,seconds,39.0861,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-04 00:00:00 UTC,2026-08-05 00:00:00 UTC,86400,seconds,43.2024,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-05 00:00:00 UTC,2026-08-06 00:00:00 UTC,86400,seconds,51.5649,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-05 00:00:00 UTC,2026-08-06 00:00:00 UTC,86400,seconds,48.2461,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-05 00:00:00 UTC,2026-08-06 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-05 00:00:00 UTC,2026-08-06 00:00:00 UTC,86400,byte-seconds,14.8147,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-05 00:00:00 UTC,2026-08-06 00:00:00 UTC,86400,bytes,42.0844,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-05 00:00:00 UTC,2026-08-06 00:00:00 UTC,86400,seconds,37.8994,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-05 00:00:00 UTC,2026-08-06 00:00:00 UTC,86400,seconds,45.5371,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-06 00:00:00 UTC,2026-08-07 00:00:00 UTC,86400,seconds,50.9638,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-06 00:00:00 UTC,2026-08-07 00:00:00 UTC,86400,seconds,51.0379,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-06 00:00:00 UTC,2026-08-07 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-06 00:00:00 UTC,2026-08-07 00:00:00 UTC,86400,byte-seconds,15.4587,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-06 00:00:00 UTC,2026-08-07 00:00:00 UTC,86400,bytes,43.1698,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-06 00:00:00 UTC,2026-08-07 00:00:00 UTC,86400,seconds,38.2371,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-06 00:00:00 UTC,2026-08-07 00:00:00 UTC,86400,seconds,46.0583,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-07 00:00:00 UTC,2026-08-08 00:00:00 UTC,86400,seconds,52.2979,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-07 00:00:00 UTC,2026-08-08 00:00:00 UTC,86400,seconds,48.1705,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-07 00:00:00 UTC,2026-08-08 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-07 00:00:00 UTC,2026-08-08 00:00:00 UTC,86400,byte-seconds,14.6143,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-07 00:00:00 UTC,2026-08-08 00:00:00 UTC,86400,bytes,40.6232,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-07 00:00:00 UTC,2026-08-08 00:00:00 UTC,86400,seconds,38.5575,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-07 00:00:00 UTC,2026-08-08 00:00:00 UTC,86400,seconds,45.8578,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-08 00:00:00 UTC,2026-08-09 00:00:00 UTC,86400,seconds,45.7343,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-08 00:00:00 UTC,2026-08-09 00:00:00 UTC,86400,seconds,40.768,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-08 00:00:00 UTC,2026-08-09 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-08 00:00:00 UTC,2026-08-09 00:00:00 UTC,86400,byte-seconds,13.0363,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-08 00:00:00 UTC,2026-08-09 00:00:00 UTC,86400,bytes,34.8288,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-08 00:00:00 UTC,2026-08-09 00:00:00 UTC,86400,seconds,31.5521,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-08 00:00:00 UTC,2026-08-09 00:00:00 UTC,86400,seconds,38.0495,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-09 00:00:00 UTC,2026-08-10 00:00:00 UTC,86400,seconds,44.6549,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-09 00:00:00 UTC,2026-08-10 00:00:00 UTC,86400,seconds,44.0879,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-09 00:00:00 UTC,2026-08-10 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-09 00:00:00 UTC,2026-08-10 00:00:00 UTC,86400,byte-seconds,12.3524,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-09 00:00:00 UTC,2026-08-10 00:00:00 UTC,86400,bytes,37.2506,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-09 00:00:00 UTC,2026-08-10 00:00:00 UTC,86400,seconds,33.0245,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-09 00:00:00 UTC,2026-08-10 00:00:00 UTC,86400,seconds,37.6201,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-10 00:00:00 UTC,2026-08-11 00:00:00 UTC,86400,seconds,51.8928,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-10 00:00:00 UTC,2026-08-11 00:00:00 UTC,86400,seconds,51.8474,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-10 00:00:00 UTC,2026-08-11 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-10 00:00:00 UTC,2026-08-11 00:00:00 UTC,86400,byte-seconds,14.7494,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-10 00:00:00 UTC,2026-08-11 00:00:00 UTC,86400,bytes,45.105,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-10 00:00:00 UTC,2026-08-11 00:00:00 UTC,86400,seconds,36.1583,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-10 00:00:00 UTC,2026-08-11 00:00:00 UTC,86400,seconds,45.9235,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-11 00:00:00 UTC,2026-08-12 00:00:00 UTC,86400,seconds,54.4028,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-11 00:00:00 UTC,2026-08-12 00:00:00 UTC,86400,seconds,48.0866,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-11 00:00:00 UTC,2026-08-12 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-11 00:00:00 UTC,2026-08-12 00:00:00 UTC,86400,byte-seconds,15.7494,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-11 00:00:00 UTC,2026-08-12 00:00:00 UTC,86400,bytes,43.4732,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-11 00:00:00 UTC,2026-08-12 00:00:00 UTC,86400,seconds,37.0219,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-11 00:00:00 UTC,2026-08-12 00:00:00 UTC,86400,seconds,44.4594,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-12 00:00:00 UTC,2026-08-13 00:00:00 UTC,86400,seconds,50.4635,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-12 00:00:00 UTC,2026-08-13 00:00:00 UTC,86400,seconds,52.0756,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-12 00:00:00 UTC,2026-08-13 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-12 00:00:00 UTC,2026-08-13 00:00:00 UTC,86400,byte-seconds,15.0781,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-12 00:00:00 UTC,2026-08-13 00:00:00 UTC,86400,bytes,45.213,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-12 00:00:00 UTC,2026-08-13 00:00:00 UTC,86400,seconds,37.5465,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-12 00:00:00 UTC,2026-08-13 00:00:00 UTC,86400,seconds,44.1481,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-13 00:00:00 UTC,2026-08-14 00:00:00 UTC,86400,seconds,51.2681,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-13 00:00:00 UTC,2026-08-14 00:00:00 UTC,86400,seconds,48.8078,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-13 00:00:00 UTC,2026-08-14 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-13 00:00:00 UTC,2026-08-14 00:00:00 UTC,86400,byte-seconds,15.0192,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-13 00:00:00 UTC,2026-08-14 00:00:00 UTC,86400,bytes,44.4286,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-13 00:00:00 UTC,2026-08-14 00:00:00 UTC,86400,seconds,36.4747,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-13 00:00:00 UTC,2026-08-14 00:00:00 UTC,86400,seconds,46.1178,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-14 00:00:00 UTC,2026-08-15 00:00:00 UTC,86400,seconds,51.8414,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-14 00:00:00 UTC,2026-08-15 00:00:00 UTC,86400,seconds,51.6987,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-14 00:00:00 UTC,2026-08-15 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-14 00:00:00 UTC,2026-08-15 00:00:00 UTC,86400,byte-seconds,15.6215,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-14 00:00:00 UTC,2026-08-15 00:00:00 UTC,86400,bytes,44.3048,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-14 00:00:00 UTC,2026-08-15 00:00:00 UTC,86400,seconds,37.6729,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-14 00:00:00 UTC,2026-08-15 00:00:00 UTC,86400,seconds,44.2751,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-15 00:00:00 UTC,2026-08-16 00:00:00 UTC,86400,seconds,42.968,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-15 00:00:00 UTC,2026-08-16 00:00:00 UTC,86400,seconds,40.9952,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-15 00:00:00 UTC,2026-08-16 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-15 00:00:00 UTC,2026-08-16 00:00:00 UTC,86400,byte-seconds,12.445,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-15 00:00:00 UTC,2026-08-16 00:00:00 UTC,86400,bytes,40.2092,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-15 00:00:00 UTC,2026-08-16 00:00:00 UTC,86400,seconds,32.5556,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-15 00:00:00 UTC,2026-08-16 00:00:00 UTC,86400,seconds,37.0917,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-16 00:00:00 UTC,2026-08-17 00:00:00 UTC,86400,seconds,42.6637,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-16 00:00:00 UTC,2026-08-17 00:00:00 UTC,86400,seconds,41.7769,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-16 00:00:00 UTC,2026-08-17 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-16 00:00:00 UTC,2026-08-17 00:00:00 UTC,86400,byte-seconds,12.5968,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-16 00:00:00 UTC,2026-08-17 00:00:00 UTC,86400,bytes,40.2166,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-16 00:00:00 UTC,2026-08-17 00:00:00 UTC,86400,seconds,32.2977,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-16 00:00:00 UTC,2026-08-17 00:00:00 UTC,86400,seconds,37.9782,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-17 00:00:00 UTC,2026-08-18 00:00:00 UTC,86400,seconds,52.9612,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-17 00:00:00 UTC,2026-08-18 00:00:00 UTC,86400,seconds,48.7866,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-17 00:00:00 UTC,2026-08-18 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-17 00:00:00 UTC,2026-08-18 00:00:00 UTC,86400,byte-seconds,15.4824,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-17 00:00:00 UTC,2026-08-18 00:00:00 UTC,86400,bytes,48.4026,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-17 00:00:00 UTC,2026-08-18 00:00:00 UTC,86400,seconds,38.5384,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-17 00:00:00 UTC,2026-08-18 00:00:00 UTC,86400,seconds,43.9586,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-18 00:00:00 UTC,2026-08-19 00:00:00 UTC,86400,seconds,50.2748,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-18 00:00:00 UTC,2026-08-19 00:00:00 UTC,86400,seconds,51.4749,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-18 00:00:00 UTC,2026-08-19 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-18 00:00:00 UTC,2026-08-19 00:00:00 UTC,86400,byte-seconds,14.5039,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-18 00:00:00 UTC,2026-08-19 00:00:00 UTC,86400,bytes,47.7367,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-18 00:00:00 UTC,2026-08-19 00:00:00 UTC,86400,seconds,37.9556,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-18 00:00:00 UTC,2026-08-19 00:00:00 UTC,86400,seconds,45.8344,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-19 00:00:00 UTC,2026-08-20 00:00:00 UTC,86400,seconds,52.2191,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-19 00:00:00 UTC,2026-08-20 00:00:00 UTC,86400,seconds,50.709,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-19 00:00:00 UTC,2026-08-20 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-19 00:00:00 UTC,2026-08-20 00:00:00 UTC,86400,byte-seconds,14.3381,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-19 00:00:00 UTC,2026-08-20 00:00:00 UTC,86400,bytes,44.9755,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-19 00:00:00 UTC,2026-08-20 00:00:00 UTC,86400,seconds,39.3175,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-19 00:00:00 UTC,2026-08-20 00:00:00 UTC,86400,seconds,45.9588,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-20 00:00:00 UTC,2026-08-21 00:00:00 UTC,86400,seconds,52.8747,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-20 00:00:00 UTC,2026-08-21 00:00:00 UTC,86400,seconds,51.3217,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-20 00:00:00 UTC,2026-08-21 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-20 00:00:00 UTC,2026-08-21 00:00:00 UTC,86400,byte-seconds,14.8686,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-20 00:00:00 UTC,2026-08-21 00:00:00 UTC,86400,bytes,49.2786,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-20 00:00:00 UTC,2026-08-21 00:00:00 UTC,86400,seconds,36.9794,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-20 00:00:00 UTC,2026-08-21 00:00:00 UTC,86400,seconds,44.9115,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-21 00:00:00 UTC,2026-08-22 00:00:00 UTC,86400,seconds,49.4475,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-21 00:00:00 UTC,2026-08-22 00:00:00 UTC,86400,seconds,50.0287,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-21 00:00:00 UTC,2026-08-22 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-21 00:00:00 UTC,2026-08-22 00:00:00 UTC,86400,byte-seconds,14.8098,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-21 00:00:00 UTC,2026-08-22 00:00:00 UTC,86400,bytes,48.69,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-21 00:00:00 UTC,2026-08-22 00:00:00 UTC,86400,seconds,38.6337,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-21 00:00:00 UTC,2026-08-22 00:00:00 UTC,86400,seconds,44.5127,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-22 00:00:00 UTC,2026-08-23 00:00:00 UTC,86400,seconds,44.1258,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-22 00:00:00 UTC,2026-08-23 00:00:00 UTC,86400,seconds,42.4484,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-22 00:00:00 UTC,2026-08-23 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-22 00:00:00 UTC,2026-08-23 00:00:00 UTC,86400,byte-seconds,12.1209,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-22 00:00:00 UTC,2026-08-23 00:00:00 UTC,86400,bytes,41.5269,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-22 00:00:00 UTC,2026-08-23 00:00:00 UTC,86400,seconds,30.7233,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-22 00:00:00 UTC,2026-08-23 00:00:00 UTC,86400,seconds,37.51,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-23 00:00:00 UTC,2026-08-24 00:00:00 UTC,86400,seconds,43.2044,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-23 00:00:00 UTC,2026-08-24 00:00:00 UTC,86400,seconds,44.5293,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-23 00:00:00 UTC,2026-08-24 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-23 00:00:00 UTC,2026-08-24 00:00:00 UTC,86400,byte-seconds,12.1344,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-23 00:00:00 UTC,2026-08-24 00:00:00 UTC,86400,bytes,43.0334,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-23 00:00:00 UTC,2026-08-24 00:00:00 UTC,86400,seconds,32.8621,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-23 00:00:00 UTC,2026-08-24 00:00:00 UTC,86400,seconds,38.5451,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-24 00:00:00 UTC,2026-08-25 00:00:00 UTC,86400,seconds,54.1308,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-24 00:00:00 UTC,2026-08-25 00:00:00 UTC,86400,seconds,48.0351,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-24 00:00:00 UTC,2026-08-25 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-24 00:00:00 UTC,2026-08-25 00:00:00 UTC,86400,byte-seconds,14.3945,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-24 00:00:00 UTC,2026-08-25 00:00:00 UTC,86400,bytes,47.8403,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-24 00:00:00 UTC,2026-08-25 00:00:00 UTC,86400,seconds,36.8293,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-24 00:00:00 UTC,2026-08-25 00:00:00 UTC,86400,seconds,44.1164,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-25 00:00:00 UTC,2026-08-26 00:00:00 UTC,86400,seconds,53.6391,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-25 00:00:00 UTC,2026-08-26 00:00:00 UTC,86400,seconds,48.8366,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-25 00:00:00 UTC,2026-08-26 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-25 00:00:00 UTC,2026-08-26 00:00:00 UTC,86400,byte-seconds,14.8453,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-25 00:00:00 UTC,2026-08-26 00:00:00 UTC,86400,bytes,49.4412,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-25 00:00:00 UTC,2026-08-26 00:00:00 UTC,86400,seconds,37.6429,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-25 00:00:00 UTC,2026-08-26 00:00:00 UTC,86400,seconds,44.286,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-26 00:00:00 UTC,2026-08-27 00:00:00 UTC,86400,seconds,54.5492,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-26 00:00:00 UTC,2026-08-27 00:00:00 UTC,86400,seconds,48.6293,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-26 00:00:00 UTC,2026-08-27 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-26 00:00:00 UTC,2026-08-27 00:00:00 UTC,86400,byte-seconds,15.2761,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-26 00:00:00 UTC,2026-08-27 00:00:00 UTC,86400,bytes,52.3371,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-26 00:00:00 UTC,2026-08-27 00:00:00 UTC,86400,seconds,38.5842,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-26 00:00:00 UTC,2026-08-27 00:00:00 UTC,86400,seconds,45.5762,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-27 00:00:00 UTC,2026-08-28 00:00:00 UTC,86400,seconds,53.3498,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-27 00:00:00 UTC,2026-08-28 00:00:00 UTC,86400,seconds,47.9675,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-27 00:00:00 UTC,2026-08-28 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-27 00:00:00 UTC,2026-08-28 00:00:00 UTC,86400,byte-seconds,14.8189,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-27 00:00:00 UTC,2026-08-28 00:00:00 UTC,86400,bytes,51.3527,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-27 00:00:00 UTC,2026-08-28 00:00:00 UTC,86400,seconds,36.3132,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-27 00:00:00 UTC,2026-08-28 00:00:00 UTC,86400,seconds,41.8416,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-28 00:00:00 UTC,2026-08-29 00:00:00 UTC,86400,seconds,50.2912,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-28 00:00:00 UTC,2026-08-29 00:00:00 UTC,86400,seconds,49.9993,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-28 00:00:00 UTC,2026-08-29 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-28 00:00:00 UTC,2026-08-29 00:00:00 UTC,86400,byte-seconds,14.9009,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-28 00:00:00 UTC,2026-08-29 00:00:00 UTC,86400,bytes,53.0615,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-28 00:00:00 UTC,2026-08-29 00:00:00 UTC,86400,seconds,38.2503,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-28 00:00:00 UTC,2026-08-29 00:00:00 UTC,86400,seconds,45.575,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-29 00:00:00 UTC,2026-08-30 00:00:00 UTC,86400,seconds,42.4115,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-29 00:00:00 UTC,2026-08-30 00:00:00 UTC,86400,seconds,42.6197,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-29 00:00:00 UTC,2026-08-30 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-29 00:00:00 UTC,2026-08-30 00:00:00 UTC,86400,byte-seconds,12.1668,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-29 00:00:00 UTC,2026-08-30 00:00:00 UTC,86400,bytes,43.0155,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-29 00:00:00 UTC,2026-08-30 00:00:00 UTC,86400,seconds,33.489,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-29 00:00:00 UTC,2026-08-30 00:00:00 UTC,86400,seconds,38.8495,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-30 00:00:00 UTC,2026-08-31 00:00:00 UTC,86400,seconds,44.0917,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-30 00:00:00 UTC,2026-08-31 00:00:00 UTC,86400,seconds,40.5729,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-30 00:00:00 UTC,2026-08-31 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-30 00:00:00 UTC,2026-08-31 00:00:00 UTC,86400,byte-seconds,12.2073,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-30 00:00:00 UTC,2026-08-31 00:00:00 UTC,86400,bytes,46.6406,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-30 00:00:00 UTC,2026-08-31 00:00:00 UTC,86400,seconds,33.5898,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-30 00:00:00 UTC,2026-08-31 00:00:00 UTC,86400,seconds,37.6375,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-08-31 00:00:00 UTC,2026-09-01 00:00:00 UTC,86400,seconds,49.5711,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-08-31 00:00:00 UTC,2026-09-01 00:00:00 UTC,86400,seconds,52.1438,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-08-31 00:00:00 UTC,2026-09-01 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-08-31 00:00:00 UTC,2026-09-01 00:00:00 UTC,86400,byte-seconds,14.7217,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-08-31 00:00:00 UTC,2026-09-01 00:00:00 UTC,86400,bytes,55.6107,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-08-31 00:00:00 UTC,2026-09-01 00:00:00 UTC,86400,seconds,38.3307,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-08-31 00:00:00 UTC,2026-09-01 00:00:00 UTC,86400,seconds,45.1099,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-01 00:00:00 UTC,2026-09-02 00:00:00 UTC,86400,seconds,53.1061,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-01 00:00:00 UTC,2026-09-02 00:00:00 UTC,86400,seconds,49.4915,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-01 00:00:00 UTC,2026-09-02 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-01 00:00:00 UTC,2026-09-02 00:00:00 UTC,86400,byte-seconds,14.3654,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-01 00:00:00 UTC,2026-09-02 00:00:00 UTC,86400,bytes,51.8769,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-01 00:00:00 UTC,2026-09-02 00:00:00 UTC,86400,seconds,37.0138,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-01 00:00:00 UTC,2026-09-02 00:00:00 UTC,86400,seconds,45.4725,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-02 00:00:00 UTC,2026-09-03 00:00:00 UTC,86400,seconds,51.4236,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-02 00:00:00 UTC,2026-09-03 00:00:00 UTC,86400,seconds,51.9826,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-02 00:00:00 UTC,2026-09-03 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-02 00:00:00 UTC,2026-09-03 00:00:00 UTC,86400,byte-seconds,14.7476,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-02 00:00:00 UTC,2026-09-03 00:00:00 UTC,86400,bytes,55.6122,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-02 00:00:00 UTC,2026-09-03 00:00:00 UTC,86400,seconds,36.6318,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-02 00:00:00 UTC,2026-09-03 00:00:00 UTC,86400,seconds,46.1493,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-03 00:00:00 UTC,2026-09-04 00:00:00 UTC,86400,seconds,53.1657,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-03 00:00:00 UTC,2026-09-04 00:00:00 UTC,86400,seconds,50.004,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-03 00:00:00 UTC,2026-09-04 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-03 00:00:00 UTC,2026-09-04 00:00:00 UTC,86400,byte-seconds,15.7115,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-03 00:00:00 UTC,2026-09-04 00:00:00 UTC,86400,bytes,52.324,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-03 00:00:00 UTC,2026-09-04 00:00:00 UTC,86400,seconds,37.7609,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-03 00:00:00 UTC,2026-09-04 00:00:00 UTC,86400,seconds,45.4902,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-04 00:00:00 UTC,2026-09-05 00:00:00 UTC,86400,seconds,51.1711,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-04 00:00:00 UTC,2026-09-05 00:00:00 UTC,86400,seconds,51.345,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-04 00:00:00 UTC,2026-09-05 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-04 00:00:00 UTC,2026-09-05 00:00:00 UTC,86400,byte-seconds,15.6823,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-04 00:00:00 UTC,2026-09-05 00:00:00 UTC,86400,bytes,54.7447,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-04 00:00:00 UTC,2026-09-05 00:00:00 UTC,86400,seconds,39.0395,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-04 00:00:00 UTC,2026-09-05 00:00:00 UTC,86400,seconds,41.9304,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-05 00:00:00 UTC,2026-09-06 00:00:00 UTC,86400,seconds,43.1981,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-05 00:00:00 UTC,2026-09-06 00:00:00 UTC,86400,seconds,44.5935,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-05 00:00:00 UTC,2026-09-06 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-05 00:00:00 UTC,2026-09-06 00:00:00 UTC,86400,byte-seconds,12.738,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-05 00:00:00 UTC,2026-09-06 00:00:00 UTC,86400,bytes,46.8041,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-05 00:00:00 UTC,2026-09-06 00:00:00 UTC,86400,seconds,33.7249,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-05 00:00:00 UTC,2026-09-06 00:00:00 UTC,86400,seconds,37.1451,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-06 00:00:00 UTC,2026-09-07 00:00:00 UTC,86400,seconds,44.9943,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-06 00:00:00 UTC,2026-09-07 00:00:00 UTC,86400,seconds,43.1829,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-06 00:00:00 UTC,2026-09-07 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-06 00:00:00 UTC,2026-09-07 00:00:00 UTC,86400,byte-seconds,12.2218,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-06 00:00:00 UTC,2026-09-07 00:00:00 UTC,86400,bytes,48.5327,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-06 00:00:00 UTC,2026-09-07 00:00:00 UTC,86400,seconds,33.2627,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-06 00:00:00 UTC,2026-09-07 00:00:00 UTC,86400,seconds,38.197,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-07 00:00:00 UTC,2026-09-08 00:00:00 UTC,86400,seconds,49.8266,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-07 00:00:00 UTC,2026-09-08 00:00:00 UTC,86400,seconds,48.2711,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-07 00:00:00 UTC,2026-09-08 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-07 00:00:00 UTC,2026-09-08 00:00:00 UTC,86400,byte-seconds,15.3175,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-07 00:00:00 UTC,2026-09-08 00:00:00 UTC,86400,bytes,57.7553,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-07 00:00:00 UTC,2026-09-08 00:00:00 UTC,86400,seconds,38.9107,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-07 00:00:00 UTC,2026-09-08 00:00:00 UTC,86400,seconds,43.1934,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-08 00:00:00 UTC,2026-09-09 00:00:00 UTC,86400,seconds,49.9541,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-08 00:00:00 UTC,2026-09-09 00:00:00 UTC,86400,seconds,47.526,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-08 00:00:00 UTC,2026-09-09 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-08 00:00:00 UTC,2026-09-09 00:00:00 UTC,86400,byte-seconds,14.7124,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-08 00:00:00 UTC,2026-09-09 00:00:00 UTC,86400,bytes,56.7558,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-08 00:00:00 UTC,2026-09-09 00:00:00 UTC,86400,seconds,37.1251,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-08 00:00:00 UTC,2026-09-09 00:00:00 UTC,86400,seconds,42.383,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-09 00:00:00 UTC,2026-09-10 00:00:00 UTC,86400,seconds,50.3744,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-09 00:00:00 UTC,2026-09-10 00:00:00 UTC,86400,seconds,49.7442,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-09 00:00:00 UTC,2026-09-10 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-09 00:00:00 UTC,2026-09-10 00:00:00 UTC,86400,byte-seconds,15.0821,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-09 00:00:00 UTC,2026-09-10 00:00:00 UTC,86400,bytes,57.6031,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-09 00:00:00 UTC,2026-09-10 00:00:00 UTC,86400,seconds,36.1998,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-09 00:00:00 UTC,2026-09-10 00:00:00 UTC,86400,seconds,43.3572,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-10 00:00:00 UTC,2026-09-11 00:00:00 UTC,86400,seconds,49.8839,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-10 00:00:00 UTC,2026-09-11 00:00:00 UTC,86400,seconds,50.4902,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-10 00:00:00 UTC,2026-09-11 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-10 00:00:00 UTC,2026-09-11 00:00:00 UTC,86400,byte-seconds,14.7366,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-10 00:00:00 UTC,2026-09-11 00:00:00 UTC,86400,bytes,58.0452,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-10 00:00:00 UTC,2026-09-11 00:00:00 UTC,86400,seconds,37.209,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-10 00:00:00 UTC,2026-09-11 00:00:00 UTC,86400,seconds,43.5063,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-11 00:00:00 UTC,2026-09-12 00:00:00 UTC,86400,seconds,49.8404,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-11 00:00:00 UTC,2026-09-12 00:00:00 UTC,86400,seconds,52.0057,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-11 00:00:00 UTC,2026-09-12 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-11 00:00:00 UTC,2026-09-12 00:00:00 UTC,86400,byte-seconds,15.6078,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-11 00:00:00 UTC,2026-09-12 00:00:00 UTC,86400,bytes,62.1422,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-11 00:00:00 UTC,2026-09-12 00:00:00 UTC,86400,seconds,38.2734,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-11 00:00:00 UTC,2026-09-12 00:00:00 UTC,86400,seconds,42.5462,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-12 00:00:00 UTC,2026-09-13 00:00:00 UTC,86400,seconds,43.6728,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-12 00:00:00 UTC,2026-09-13 00:00:00 UTC,86400,seconds,40.9651,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-12 00:00:00 UTC,2026-09-13 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-12 00:00:00 UTC,2026-09-13 00:00:00 UTC,86400,byte-seconds,12.4964,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-12 00:00:00 UTC,2026-09-13 00:00:00 UTC,86400,bytes,50.8795,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-12 00:00:00 UTC,2026-09-13 00:00:00 UTC,86400,seconds,30.8894,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-12 00:00:00 UTC,2026-09-13 00:00:00 UTC,86400,seconds,37.1557,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-13 00:00:00 UTC,2026-09-14 00:00:00 UTC,86400,seconds,43.8513,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-13 00:00:00 UTC,2026-09-14 00:00:00 UTC,86400,seconds,42.433,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-13 00:00:00 UTC,2026-09-14 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-13 00:00:00 UTC,2026-09-14 00:00:00 UTC,86400,byte-seconds,12.2106,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-13 00:00:00 UTC,2026-09-14 00:00:00 UTC,86400,bytes,50.1468,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-13 00:00:00 UTC,2026-09-14 00:00:00 UTC,86400,seconds,31.4815,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-13 00:00:00 UTC,2026-09-14 00:00:00 UTC,86400,seconds,37.8676,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-14 00:00:00 UTC,2026-09-15 00:00:00 UTC,86400,seconds,52.4878,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-14 00:00:00 UTC,2026-09-15 00:00:00 UTC,86400,seconds,48.4777,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-14 00:00:00 UTC,2026-09-15 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-14 00:00:00 UTC,2026-09-15 00:00:00 UTC,86400,byte-seconds,14.4105,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-14 00:00:00 UTC,2026-09-15 00:00:00 UTC,86400,bytes,59.9097,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-14 00:00:00 UTC,2026-09-15 00:00:00 UTC,86400,seconds,39.7055,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-14 00:00:00 UTC,2026-09-15 00:00:00 UTC,86400,seconds,43.2618,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-15 00:00:00 UTC,2026-09-16 00:00:00 UTC,86400,seconds,52.625,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-15 00:00:00 UTC,2026-09-16 00:00:00 UTC,86400,seconds,51.5204,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-15 00:00:00 UTC,2026-09-16 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-15 00:00:00 UTC,2026-09-16 00:00:00 UTC,86400,byte-seconds,14.7443,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-15 00:00:00 UTC,2026-09-16 00:00:00 UTC,86400,bytes,60.6945,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-15 00:00:00 UTC,2026-09-16 00:00:00 UTC,86400,seconds,39.1988,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-15 00:00:00 UTC,2026-09-16 00:00:00 UTC,86400,seconds,45.5818,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-16 00:00:00 UTC,2026-09-17 00:00:00 UTC,86400,seconds,54.466,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-16 00:00:00 UTC,2026-09-17 00:00:00 UTC,86400,seconds,48.1806,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-16 00:00:00 UTC,2026-09-17 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-16 00:00:00 UTC,2026-09-17 00:00:00 UTC,86400,byte-seconds,14.731,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-16 00:00:00 UTC,2026-09-17 00:00:00 UTC,86400,bytes,65.1195,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-16 00:00:00 UTC,2026-09-17 00:00:00 UTC,86400,seconds,36.8632,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-16 00:00:00 UTC,2026-09-17 00:00:00 UTC,86400,seconds,43.1824,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-17 00:00:00 UTC,2026-09-18 00:00:00 UTC,86400,seconds,54.4158,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-17 00:00:00 UTC,2026-09-18 00:00:00 UTC,86400,seconds,52.3436,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-17 00:00:00 UTC,2026-09-18 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-17 00:00:00 UTC,2026-09-18 00:00:00 UTC,86400,byte-seconds,14.6872,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-17 00:00:00 UTC,2026-09-18 00:00:00 UTC,86400,bytes,64.1822,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-17 00:00:00 UTC,2026-09-18 00:00:00 UTC,86400,seconds,37.9658,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-17 00:00:00 UTC,2026-09-18 00:00:00 UTC,86400,seconds,44.3339,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-18 00:00:00 UTC,2026-09-19 00:00:00 UTC,86400,seconds,50.6606,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-18 00:00:00 UTC,2026-09-19 00:00:00 UTC,86400,seconds,49.3803,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-18 00:00:00 UTC,2026-09-19 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-18 00:00:00 UTC,2026-09-19 00:00:00 UTC,86400,byte-seconds,15.4747,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-18 00:00:00 UTC,2026-09-19 00:00:00 UTC,86400,bytes,62.9036,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-18 00:00:00 UTC,2026-09-19 00:00:00 UTC,86400,seconds,36.5328,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-18 00:00:00 UTC,2026-09-19 00:00:00 UTC,86400,seconds,44.2809,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-19 00:00:00 UTC,2026-09-20 00:00:00 UTC,86400,seconds,44.6076,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-19 00:00:00 UTC,2026-09-20 00:00:00 UTC,86400,seconds,42.6939,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-19 00:00:00 UTC,2026-09-20 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-19 00:00:00 UTC,2026-09-20 00:00:00 UTC,86400,byte-seconds,12.9817,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-19 00:00:00 UTC,2026-09-20 00:00:00 UTC,86400,bytes,54.8607,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-19 00:00:00 UTC,2026-09-20 00:00:00 UTC,86400,seconds,33.7632,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-19 00:00:00 UTC,2026-09-20 00:00:00 UTC,86400,seconds,37.2565,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-20 00:00:00 UTC,2026-09-21 00:00:00 UTC,86400,seconds,45.121,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-20 00:00:00 UTC,2026-09-21 00:00:00 UTC,86400,seconds,42.2384,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-20 00:00:00 UTC,2026-09-21 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-20 00:00:00 UTC,2026-09-21 00:00:00 UTC,86400,byte-seconds,12.4839,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-20 00:00:00 UTC,2026-09-21 00:00:00 UTC,86400,bytes,56.1962,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-20 00:00:00 UTC,2026-09-21 00:00:00 UTC,86400,seconds,33.3303,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-20 00:00:00 UTC,2026-09-21 00:00:00 UTC,86400,seconds,38.5058,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-21 00:00:00 UTC,2026-09-22 00:00:00 UTC,86400,seconds,51.5275,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-21 00:00:00 UTC,2026-09-22 00:00:00 UTC,86400,seconds,49.9965,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-21 00:00:00 UTC,2026-09-22 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-21 00:00:00 UTC,2026-09-22 00:00:00 UTC,86400,byte-seconds,15.2,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-21 00:00:00 UTC,2026-09-22 00:00:00 UTC,86400,bytes,63.821,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-21 00:00:00 UTC,2026-09-22 00:00:00 UTC,86400,seconds,38.6029,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-21 00:00:00 UTC,2026-09-22 00:00:00 UTC,86400,seconds,44.947,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-22 00:00:00 UTC,2026-09-23 00:00:00 UTC,86400,seconds,53.5032,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-22 00:00:00 UTC,2026-09-23 00:00:00 UTC,86400,seconds,47.8698,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-22 00:00:00 UTC,2026-09-23 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-22 00:00:00 UTC,2026-09-23 00:00:00 UTC,86400,byte-seconds,15.7361,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-22 00:00:00 UTC,2026-09-23 00:00:00 UTC,86400,bytes,66.0288,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-22 00:00:00 UTC,2026-09-23 00:00:00 UTC,86400,seconds,37.6231,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-22 00:00:00 UTC,2026-09-23 00:00:00 UTC,86400,seconds,44.0291,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-23 00:00:00 UTC,2026-09-24 00:00:00 UTC,86400,seconds,54.186,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-23 00:00:00 UTC,2026-09-24 00:00:00 UTC,86400,seconds,50.9585,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-23 00:00:00 UTC,2026-09-24 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-23 00:00:00 UTC,2026-09-24 00:00:00 UTC,86400,byte-seconds,15.0655,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-23 00:00:00 UTC,2026-09-24 00:00:00 UTC,86400,bytes,68.7707,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-23 00:00:00 UTC,2026-09-24 00:00:00 UTC,86400,seconds,37.4662,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-23 00:00:00 UTC,2026-09-24 00:00:00 UTC,86400,seconds,45.7402,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-24 00:00:00 UTC,2026-09-25 00:00:00 UTC,86400,seconds,52.1919,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-24 00:00:00 UTC,2026-09-25 00:00:00 UTC,86400,seconds,50.6909,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-24 00:00:00 UTC,2026-09-25 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-24 00:00:00 UTC,2026-09-25 00:00:00 UTC,86400,byte-seconds,14.3775,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-24 00:00:00 UTC,2026-09-25 00:00:00 UTC,86400,bytes,69.3114,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-24 00:00:00 UTC,2026-09-25 00:00:00 UTC,86400,seconds,38.5989,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-24 00:00:00 UTC,2026-09-25 00:00:00 UTC,86400,seconds,43.362,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-25 00:00:00 UTC,2026-09-26 00:00:00 UTC,86400,seconds,52.7644,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-25 00:00:00 UTC,2026-09-26 00:00:00 UTC,86400,seconds,47.7215,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-25 00:00:00 UTC,2026-09-26 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-25 00:00:00 UTC,2026-09-26 00:00:00 UTC,86400,byte-seconds,15.7254,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-25 00:00:00 UTC,2026-09-26 00:00:00 UTC,86400,bytes,69.3809,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-25 00:00:00 UTC,2026-09-26 00:00:00 UTC,86400,seconds,37.6185,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-25 00:00:00 UTC,2026-09-26 00:00:00 UTC,86400,seconds,45.1118,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-26 00:00:00 UTC,2026-09-27 00:00:00 UTC,86400,seconds,46.2585,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-26 00:00:00 UTC,2026-09-27 00:00:00 UTC,86400,seconds,42.2044,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-26 00:00:00 UTC,2026-09-27 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-26 00:00:00 UTC,2026-09-27 00:00:00 UTC,86400,byte-seconds,12.1259,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-26 00:00:00 UTC,2026-09-27 00:00:00 UTC,86400,bytes,57.1129,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-26 00:00:00 UTC,2026-09-27 00:00:00 UTC,86400,seconds,32.3345,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-26 00:00:00 UTC,2026-09-27 00:00:00 UTC,86400,seconds,37.4703,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-27 00:00:00 UTC,2026-09-28 00:00:00 UTC,86400,seconds,44.5559,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-27 00:00:00 UTC,2026-09-28 00:00:00 UTC,86400,seconds,42.8198,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-27 00:00:00 UTC,2026-09-28 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-27 00:00:00 UTC,2026-09-28 00:00:00 UTC,86400,byte-seconds,12.6809,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-27 00:00:00 UTC,2026-09-28 00:00:00 UTC,86400,bytes,58.4666,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-27 00:00:00 UTC,2026-09-28 00:00:00 UTC,86400,seconds,33.1797,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-27 00:00:00 UTC,2026-09-28 00:00:00 UTC,86400,seconds,37.7313,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-28 00:00:00 UTC,2026-09-29 00:00:00 UTC,86400,seconds,52.0024,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-28 00:00:00 UTC,2026-09-29 00:00:00 UTC,86400,seconds,49.2248,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-28 00:00:00 UTC,2026-09-29 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-28 00:00:00 UTC,2026-09-29 00:00:00 UTC,86400,byte-seconds,14.2868,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-28 00:00:00 UTC,2026-09-29 00:00:00 UTC,86400,bytes,67.4592,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-28 00:00:00 UTC,2026-09-29 00:00:00 UTC,86400,seconds,37.6807,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-28 00:00:00 UTC,2026-09-29 00:00:00 UTC,86400,seconds,46.0316,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-29 00:00:00 UTC,2026-09-30 00:00:00 UTC,86400,seconds,50.0036,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-29 00:00:00 UTC,2026-09-30 00:00:00 UTC,86400,seconds,52.2034,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-29 00:00:00 UTC,2026-09-30 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-29 00:00:00 UTC,2026-09-30 00:00:00 UTC,86400,byte-seconds,14.4625,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-29 00:00:00 UTC,2026-09-30 00:00:00 UTC,86400,bytes,69.6047,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-29 00:00:00 UTC,2026-09-30 00:00:00 UTC,86400,seconds,37.8303,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-29 00:00:00 UTC,2026-09-30 00:00:00 UTC,86400,seconds,42.7102,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-09-30 00:00:00 UTC,2026-10-01 00:00:00 UTC,86400,seconds,51.9112,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-09-30 00:00:00 UTC,2026-10-01 00:00:00 UTC,86400,seconds,49.8808,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-09-30 00:00:00 UTC,2026-10-01 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-09-30 00:00:00 UTC,2026-10-01 00:00:00 UTC,86400,byte-seconds,14.9072,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-09-30 00:00:00 UTC,2026-10-01 00:00:00 UTC,86400,bytes,73.0583,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-09-30 00:00:00 UTC,2026-10-01 00:00:00 UTC,86400,seconds,37.3119,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-09-30 00:00:00 UTC,2026-10-01 00:00:00 UTC,86400,seconds,43.1212,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-01 00:00:00 UTC,2026-10-02 00:00:00 UTC,86400,seconds,53.613,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-01 00:00:00 UTC,2026-10-02 00:00:00 UTC,86400,seconds,48.0754,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-01 00:00:00 UTC,2026-10-02 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-01 00:00:00 UTC,2026-10-02 00:00:00 UTC,86400,byte-seconds,15.5238,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-01 00:00:00 UTC,2026-10-02 00:00:00 UTC,86400,bytes,73.4357,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-01 00:00:00 UTC,2026-10-02 00:00:00 UTC,86400,seconds,38.6731,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-01 00:00:00 UTC,2026-10-02 00:00:00 UTC,86400,seconds,42.5232,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-02 00:00:00 UTC,2026-10-03 00:00:00 UTC,86400,seconds,54.5163,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-02 00:00:00 UTC,2026-10-03 00:00:00 UTC,86400,seconds,48.7196,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-02 00:00:00 UTC,2026-10-03 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-02 00:00:00 UTC,2026-10-03 00:00:00 UTC,86400,byte-seconds,14.5117,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-02 00:00:00 UTC,2026-10-03 00:00:00 UTC,86400,bytes,70.6046,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-02 00:00:00 UTC,2026-10-03 00:00:00 UTC,86400,seconds,38.2274,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-02 00:00:00 UTC,2026-10-03 00:00:00 UTC,86400,seconds,46.0172,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-03 00:00:00 UTC,2026-10-04 00:00:00 UTC,86400,seconds,43.0148,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-03 00:00:00 UTC,2026-10-04 00:00:00 UTC,86400,seconds,42.0965,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-03 00:00:00 UTC,2026-10-04 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-03 00:00:00 UTC,2026-10-04 00:00:00 UTC,86400,byte-seconds,12.3477,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-03 00:00:00 UTC,2026-10-04 00:00:00 UTC,86400,bytes,63.628,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-03 00:00:00 UTC,2026-10-04 00:00:00 UTC,86400,seconds,32.0808,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-03 00:00:00 UTC,2026-10-04 00:00:00 UTC,86400,seconds,35.6392,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-04 00:00:00 UTC,2026-10-05 00:00:00 UTC,86400,seconds,44.7044,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-04 00:00:00 UTC,2026-10-05 00:00:00 UTC,86400,seconds,41.2136,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-04 00:00:00 UTC,2026-10-05 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-04 00:00:00 UTC,2026-10-05 00:00:00 UTC,86400,byte-seconds,12.8676,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-04 00:00:00 UTC,2026-10-05 00:00:00 UTC,86400,bytes,62.6695,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-04 00:00:00 UTC,2026-10-05 00:00:00 UTC,86400,seconds,32.9613,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-04 00:00:00 UTC,2026-10-05 00:00:00 UTC,86400,seconds,36.2996,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-05 00:00:00 UTC,2026-10-06 00:00:00 UTC,86400,seconds,53.3121,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-05 00:00:00 UTC,2026-10-06 00:00:00 UTC,86400,seconds,51.5436,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-05 00:00:00 UTC,2026-10-06 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-05 00:00:00 UTC,2026-10-06 00:00:00 UTC,86400,byte-seconds,14.3438,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-05 00:00:00 UTC,2026-10-06 00:00:00 UTC,86400,bytes,72.3043,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-05 00:00:00 UTC,2026-10-06 00:00:00 UTC,86400,seconds,39.4135,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-05 00:00:00 UTC,2026-10-06 00:00:00 UTC,86400,seconds,42.6226,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-06 00:00:00 UTC,2026-10-07 00:00:00 UTC,86400,seconds,51.0951,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-06 00:00:00 UTC,2026-10-07 00:00:00 UTC,86400,seconds,49.7878,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-06 00:00:00 UTC,2026-10-07 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-06 00:00:00 UTC,2026-10-07 00:00:00 UTC,86400,byte-seconds,14.6435,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-06 00:00:00 UTC,2026-10-07 00:00:00 UTC,86400,bytes,78.8144,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-06 00:00:00 UTC,2026-10-07 00:00:00 UTC,86400,seconds,38.1053,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-06 00:00:00 UTC,2026-10-07 00:00:00 UTC,86400,seconds,44.6121,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-07 00:00:00 UTC,2026-10-08 00:00:00 UTC,86400,seconds,52.5042,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-07 00:00:00 UTC,2026-10-08 00:00:00 UTC,86400,seconds,50.5565,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-07 00:00:00 UTC,2026-10-08 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-07 00:00:00 UTC,2026-10-08 00:00:00 UTC,86400,byte-seconds,15.1305,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-07 00:00:00 UTC,2026-10-08 00:00:00 UTC,86400,bytes,75.6487,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-07 00:00:00 UTC,2026-10-08 00:00:00 UTC,86400,seconds,39.313,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-07 00:00:00 UTC,2026-10-08 00:00:00 UTC,86400,seconds,44.5164,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-08 00:00:00 UTC,2026-10-09 00:00:00 UTC,86400,seconds,53.6314,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-08 00:00:00 UTC,2026-10-09 00:00:00 UTC,86400,seconds,51.0299,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-08 00:00:00 UTC,2026-10-09 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-08 00:00:00 UTC,2026-10-09 00:00:00 UTC,86400,byte-seconds,14.6962,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-08 00:00:00 UTC,2026-10-09 00:00:00 UTC,86400,bytes,78.4733,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-08 00:00:00 UTC,2026-10-09 00:00:00 UTC,86400,seconds,36.4221,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-08 00:00:00 UTC,2026-10-09 00:00:00 UTC,86400,seconds,42.3894,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-09 00:00:00 UTC,2026-10-10 00:00:00 UTC,86400,seconds,50.0129,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-09 00:00:00 UTC,2026-10-10 00:00:00 UTC,86400,seconds,49.0269,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-09 00:00:00 UTC,2026-10-10 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-09 00:00:00 UTC,2026-10-10 00:00:00 UTC,86400,byte-seconds,14.5246,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-09 00:00:00 UTC,2026-10-10 00:00:00 UTC,86400,bytes,79.8767,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-09 00:00:00 UTC,2026-10-10 00:00:00 UTC,86400,seconds,38.0411,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-09 00:00:00 UTC,2026-10-10 00:00:00 UTC,86400,seconds,43.6403,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-10 00:00:00 UTC,2026-10-11 00:00:00 UTC,86400,seconds,42.5994,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-10 00:00:00 UTC,2026-10-11 00:00:00 UTC,86400,seconds,42.0058,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-10 00:00:00 UTC,2026-10-11 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-10 00:00:00 UTC,2026-10-11 00:00:00 UTC,86400,byte-seconds,12.3493,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-10 00:00:00 UTC,2026-10-11 00:00:00 UTC,86400,bytes,68.1844,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-10 00:00:00 UTC,2026-10-11 00:00:00 UTC,86400,seconds,32.9248,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-10 00:00:00 UTC,2026-10-11 00:00:00 UTC,86400,seconds,37.9433,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-11 00:00:00 UTC,2026-10-12 00:00:00 UTC,86400,seconds,46.4096,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-11 00:00:00 UTC,2026-10-12 00:00:00 UTC,86400,seconds,42.7334,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-11 00:00:00 UTC,2026-10-12 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-11 00:00:00 UTC,2026-10-12 00:00:00 UTC,86400,byte-seconds,12.7368,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-11 00:00:00 UTC,2026-10-12 00:00:00 UTC,86400,bytes,65.5015,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-11 00:00:00 UTC,2026-10-12 00:00:00 UTC,86400,seconds,31.7011,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-11 00:00:00 UTC,2026-10-12 00:00:00 UTC,86400,seconds,37.2167,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-12 00:00:00 UTC,2026-10-13 00:00:00 UTC,86400,seconds,49.6788,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-12 00:00:00 UTC,2026-10-13 00:00:00 UTC,86400,seconds,49.2952,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-12 00:00:00 UTC,2026-10-13 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-12 00:00:00 UTC,2026-10-13 00:00:00 UTC,86400,byte-seconds,14.2644,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-12 00:00:00 UTC,2026-10-13 00:00:00 UTC,86400,bytes,77.8008,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-12 00:00:00 UTC,2026-10-13 00:00:00 UTC,86400,seconds,39.1978,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-12 00:00:00 UTC,2026-10-13 00:00:00 UTC,86400,seconds,46.0408,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-13 00:00:00 UTC,2026-10-14 00:00:00 UTC,86400,seconds,52.0283,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-13 00:00:00 UTC,2026-10-14 00:00:00 UTC,86400,seconds,49.9748,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-13 00:00:00 UTC,2026-10-14 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-13 00:00:00 UTC,2026-10-14 00:00:00 UTC,86400,byte-seconds,15.277,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-13 00:00:00 UTC,2026-10-14 00:00:00 UTC,86400,bytes,80.8547,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-13 00:00:00 UTC,2026-10-14 00:00:00 UTC,86400,seconds,39.2916,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-13 00:00:00 UTC,2026-10-14 00:00:00 UTC,86400,seconds,43.9503,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-14 00:00:00 UTC,2026-10-15 00:00:00 UTC,86400,seconds,49.8299,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-14 00:00:00 UTC,2026-10-15 00:00:00 UTC,86400,seconds,47.6543,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-14 00:00:00 UTC,2026-10-15 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-14 00:00:00 UTC,2026-10-15 00:00:00 UTC,86400,byte-seconds,15.3916,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-14 00:00:00 UTC,2026-10-15 00:00:00 UTC,86400,bytes,80.6458,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-14 00:00:00 UTC,2026-10-15 00:00:00 UTC,86400,seconds,37.1444,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-14 00:00:00 UTC,2026-10-15 00:00:00 UTC,86400,seconds,44.1655,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-15 00:00:00 UTC,2026-10-16 00:00:00 UTC,86400,seconds,50.2747,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-15 00:00:00 UTC,2026-10-16 00:00:00 UTC,86400,seconds,49.7866,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-15 00:00:00 UTC,2026-10-16 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-15 00:00:00 UTC,2026-10-16 00:00:00 UTC,86400,byte-seconds,15.3638,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-15 00:00:00 UTC,2026-10-16 00:00:00 UTC,86400,bytes,85.3936,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-15 00:00:00 UTC,2026-10-16 00:00:00 UTC,86400,seconds,38.189,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-15 00:00:00 UTC,2026-10-16 00:00:00 UTC,86400,seconds,42.2981,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-16 00:00:00 UTC,2026-10-17 00:00:00 UTC,86400,seconds,49.9939,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-16 00:00:00 UTC,2026-10-17 00:00:00 UTC,86400,seconds,51.3756,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-16 00:00:00 UTC,2026-10-17 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-16 00:00:00 UTC,2026-10-17 00:00:00 UTC,86400,byte-seconds,15.4849,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-16 00:00:00 UTC,2026-10-17 00:00:00 UTC,86400,bytes,82.8949,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-16 00:00:00 UTC,2026-10-17 00:00:00 UTC,86400,seconds,39.2259,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-16 00:00:00 UTC,2026-10-17 00:00:00 UTC,86400,seconds,41.9831,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-17 00:00:00 UTC,2026-10-18 00:00:00 UTC,86400,seconds,45.1679,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-17 00:00:00 UTC,2026-10-18 00:00:00 UTC,86400,seconds,42.697,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-17 00:00:00 UTC,2026-10-18 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-17 00:00:00 UTC,2026-10-18 00:00:00 UTC,86400,byte-seconds,13.3745,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-17 00:00:00 UTC,2026-10-18 00:00:00 UTC,86400,bytes,69.258,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-17 00:00:00 UTC,2026-10-18 00:00:00 UTC,86400,seconds,33.3661,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-17 00:00:00 UTC,2026-10-18 00:00:00 UTC,86400,seconds,38.34,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-18 00:00:00 UTC,2026-10-19 00:00:00 UTC,86400,seconds,43.3059,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-18 00:00:00 UTC,2026-10-19 00:00:00 UTC,86400,seconds,44.6221,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-18 00:00:00 UTC,2026-10-19 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-18 00:00:00 UTC,2026-10-19 00:00:00 UTC,86400,byte-seconds,12.6859,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-18 00:00:00 UTC,2026-10-19 00:00:00 UTC,86400,bytes,71.7438,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-18 00:00:00 UTC,2026-10-19 00:00:00 UTC,86400,seconds,33.323,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-18 00:00:00 UTC,2026-10-19 00:00:00 UTC,86400,seconds,37.1721,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-19 00:00:00 UTC,2026-10-20 00:00:00 UTC,86400,seconds,54.5686,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-19 00:00:00 UTC,2026-10-20 00:00:00 UTC,86400,seconds,51.3782,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-19 00:00:00 UTC,2026-10-20 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-19 00:00:00 UTC,2026-10-20 00:00:00 UTC,86400,byte-seconds,14.6054,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-19 00:00:00 UTC,2026-10-20 00:00:00 UTC,86400,bytes,89.2486,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-19 00:00:00 UTC,2026-10-20 00:00:00 UTC,86400,seconds,38.3341,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-19 00:00:00 UTC,2026-10-20 00:00:00 UTC,86400,seconds,43.3428,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-20 00:00:00 UTC,2026-10-21 00:00:00 UTC,86400,seconds,53.0959,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-20 00:00:00 UTC,2026-10-21 00:00:00 UTC,86400,seconds,50.6639,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-20 00:00:00 UTC,2026-10-21 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-20 00:00:00 UTC,2026-10-21 00:00:00 UTC,86400,byte-seconds,14.499,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-20 00:00:00 UTC,2026-10-21 00:00:00 UTC,86400,bytes,84.2708,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-20 00:00:00 UTC,2026-10-21 00:00:00 UTC,86400,seconds,36.8852,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-20 00:00:00 UTC,2026-10-21 00:00:00 UTC,86400,seconds,42.7105,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-21 00:00:00 UTC,2026-10-22 00:00:00 UTC,86400,seconds,49.7087,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-21 00:00:00 UTC,2026-10-22 00:00:00 UTC,86400,seconds,49.2541,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-21 00:00:00 UTC,2026-10-22 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-21 00:00:00 UTC,2026-10-22 00:00:00 UTC,86400,byte-seconds,14.6716,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-21 00:00:00 UTC,2026-10-22 00:00:00 UTC,86400,bytes,88.6413,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-21 00:00:00 UTC,2026-10-22 00:00:00 UTC,86400,seconds,37.3299,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-21 00:00:00 UTC,2026-10-22 00:00:00 UTC,86400,seconds,44.8978,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-22 00:00:00 UTC,2026-10-23 00:00:00 UTC,86400,seconds,50.9045,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-22 00:00:00 UTC,2026-10-23 00:00:00 UTC,86400,seconds,48.8367,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-22 00:00:00 UTC,2026-10-23 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-22 00:00:00 UTC,2026-10-23 00:00:00 UTC,86400,byte-seconds,15.537,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-22 00:00:00 UTC,2026-10-23 00:00:00 UTC,86400,bytes,374.0467,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-22 00:00:00 UTC,2026-10-23 00:00:00 UTC,86400,seconds,38.6813,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-22 00:00:00 UTC,2026-10-23 00:00:00 UTC,86400,seconds,42.219,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-23 00:00:00 UTC,2026-10-24 00:00:00 UTC,86400,seconds,54.4064,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-23 00:00:00 UTC,2026-10-24 00:00:00 UTC,86400,seconds,51.4285,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-23 00:00:00 UTC,2026-10-24 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-23 00:00:00 UTC,2026-10-24 00:00:00 UTC,86400,byte-seconds,15.6282,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-23 00:00:00 UTC,2026-10-24 00:00:00 UTC,86400,bytes,94.5098,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-23 00:00:00 UTC,2026-10-24 00:00:00 UTC,86400,seconds,39.3948,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-23 00:00:00 UTC,2026-10-24 00:00:00 UTC,86400,seconds,42.3583,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-24 00:00:00 UTC,2026-10-25 00:00:00 UTC,86400,seconds,45.8181,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-24 00:00:00 UTC,2026-10-25 00:00:00 UTC,86400,seconds,41.4361,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-24 00:00:00 UTC,2026-10-25 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-24 00:00:00 UTC,2026-10-25 00:00:00 UTC,86400,byte-seconds,13.0195,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-24 00:00:00 UTC,2026-10-25 00:00:00 UTC,86400,bytes,79.8685,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-24 00:00:00 UTC,2026-10-25 00:00:00 UTC,86400,seconds,33.1446,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-24 00:00:00 UTC,2026-10-25 00:00:00 UTC,86400,seconds,38.0591,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-25 00:00:00 UTC,2026-10-26 00:00:00 UTC,86400,seconds,44.1534,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-25 00:00:00 UTC,2026-10-26 00:00:00 UTC,86400,seconds,42.8291,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-25 00:00:00 UTC,2026-10-26 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-25 00:00:00 UTC,2026-10-26 00:00:00 UTC,86400,byte-seconds,12.4551,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-25 00:00:00 UTC,2026-10-26 00:00:00 UTC,86400,bytes,77.4317,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-25 00:00:00 UTC,2026-10-26 00:00:00 UTC,86400,seconds,32.1449,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-25 00:00:00 UTC,2026-10-26 00:00:00 UTC,86400,seconds,37.8998,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-26 00:00:00 UTC,2026-10-27 00:00:00 UTC,86400,seconds,53.9767,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-26 00:00:00 UTC,2026-10-27 00:00:00 UTC,86400,seconds,47.9655,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-26 00:00:00 UTC,2026-10-27 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-26 00:00:00 UTC,2026-10-27 00:00:00 UTC,86400,byte-seconds,15.0234,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-26 00:00:00 UTC,2026-10-27 00:00:00 UTC,86400,bytes,90.745,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-26 00:00:00 UTC,2026-10-27 00:00:00 UTC,86400,seconds,39.6581,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-26 00:00:00 UTC,2026-10-27 00:00:00 UTC,86400,seconds,43.4239,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-27 00:00:00 UTC,2026-10-28 00:00:00 UTC,86400,seconds,54.3413,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-27 00:00:00 UTC,2026-10-28 00:00:00 UTC,86400,seconds,49.1364,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-27 00:00:00 UTC,2026-10-28 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-27 00:00:00 UTC,2026-10-28 00:00:00 UTC,86400,byte-seconds,14.2537,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-27 00:00:00 UTC,2026-10-28 00:00:00 UTC,86400,bytes,96.3007,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-27 00:00:00 UTC,2026-10-28 00:00:00 UTC,86400,seconds,38.8844,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-27 00:00:00 UTC,2026-10-28 00:00:00 UTC,86400,seconds,45.0161,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-28 00:00:00 UTC,2026-10-29 00:00:00 UTC,86400,seconds,51.7839,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-28 00:00:00 UTC,2026-10-29 00:00:00 UTC,86400,seconds,50.8207,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-28 00:00:00 UTC,2026-10-29 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-28 00:00:00 UTC,2026-10-29 00:00:00 UTC,86400,byte-seconds,14.7873,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-28 00:00:00 UTC,2026-10-29 00:00:00 UTC,86400,bytes,90.5346,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-28 00:00:00 UTC,2026-10-29 00:00:00 UTC,86400,seconds,38.1308,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-28 00:00:00 UTC,2026-10-29 00:00:00 UTC,86400,seconds,42.7585,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-29 00:00:00 UTC,2026-10-30 00:00:00 UTC,86400,seconds,51.6341,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-29 00:00:00 UTC,2026-10-30 00:00:00 UTC,86400,seconds,48.5593,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-29 00:00:00 UTC,2026-10-30 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-29 00:00:00 UTC,2026-10-30 00:00:00 UTC,86400,byte-seconds,14.6528,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-29 00:00:00 UTC,2026-10-30 00:00:00 UTC,86400,bytes,98.7546,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-29 00:00:00 UTC,2026-10-30 00:00:00 UTC,86400,seconds,37.3835,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-29 00:00:00 UTC,2026-10-30 00:00:00 UTC,86400,seconds,44.3429,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-30 00:00:00 UTC,2026-10-31 00:00:00 UTC,86400,seconds,52.3439,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-30 00:00:00 UTC,2026-10-31 00:00:00 UTC,86400,seconds,49.9267,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-30 00:00:00 UTC,2026-10-31 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-30 00:00:00 UTC,2026-10-31 00:00:00 UTC,86400,byte-seconds,14.7656,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-30 00:00:00 UTC,2026-10-31 00:00:00 UTC,86400,bytes,98.3342,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-30 00:00:00 UTC,2026-10-31 00:00:00 UTC,86400,seconds,36.284,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-30 00:00:00 UTC,2026-10-31 00:00:00 UTC,86400,seconds,42.2381,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-10-31 00:00:00 UTC,2026-11-01 00:00:00 UTC,86400,seconds,45.4548,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-10-31 00:00:00 UTC,2026-11-01 00:00:00 UTC,86400,seconds,42.3282,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-10-31 00:00:00 UTC,2026-11-01 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-10-31 00:00:00 UTC,2026-11-01 00:00:00 UTC,86400,byte-seconds,12.2709,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-10-31 00:00:00 UTC,2026-11-01 00:00:00 UTC,86400,bytes,85.8716,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-10-31 00:00:00 UTC,2026-11-01 00:00:00 UTC,86400,seconds,32.1104,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-10-31 00:00:00 UTC,2026-11-01 00:00:00 UTC,86400,seconds,35.5325,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-01 00:00:00 UTC,2026-11-02 00:00:00 UTC,86400,seconds,46.2245,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-01 00:00:00 UTC,2026-11-02 00:00:00 UTC,86400,seconds,41.2349,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-01 00:00:00 UTC,2026-11-02 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-01 00:00:00 UTC,2026-11-02 00:00:00 UTC,86400,byte-seconds,12.9905,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-01 00:00:00 UTC,2026-11-02 00:00:00 UTC,86400,bytes,80.6533,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-01 00:00:00 UTC,2026-11-02 00:00:00 UTC,86400,seconds,32.7845,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-01 00:00:00 UTC,2026-11-02 00:00:00 UTC,86400,seconds,36.1246,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-02 00:00:00 UTC,2026-11-03 00:00:00 UTC,86400,seconds,54.2502,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-02 00:00:00 UTC,2026-11-03 00:00:00 UTC,86400,seconds,48.8701,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-02 00:00:00 UTC,2026-11-03 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-02 00:00:00 UTC,2026-11-03 00:00:00 UTC,86400,byte-seconds,15.2319,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-02 00:00:00 UTC,2026-11-03 00:00:00 UTC,86400,bytes,97.014,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-02 00:00:00 UTC,2026-11-03 00:00:00 UTC,86400,seconds,37.513,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-02 00:00:00 UTC,2026-11-03 00:00:00 UTC,86400,seconds,45.7767,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-03 00:00:00 UTC,2026-11-04 00:00:00 UTC,86400,seconds,50.2607,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-03 00:00:00 UTC,2026-11-04 00:00:00 UTC,86400,seconds,49.4817,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-03 00:00:00 UTC,2026-11-04 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-03 00:00:00 UTC,2026-11-04 00:00:00 UTC,86400,byte-seconds,14.7083,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-03 00:00:00 UTC,2026-11-04 00:00:00 UTC,86400,bytes,102.4967,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-03 00:00:00 UTC,2026-11-04 00:00:00 UTC,86400,seconds,36.9897,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-03 00:00:00 UTC,2026-11-04 00:00:00 UTC,86400,seconds,44.6841,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-04 00:00:00 UTC,2026-11-05 00:00:00 UTC,86400,seconds,53.0592,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-04 00:00:00 UTC,2026-11-05 00:00:00 UTC,86400,seconds,47.5054,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-04 00:00:00 UTC,2026-11-05 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-04 00:00:00 UTC,2026-11-05 00:00:00 UTC,86400,byte-seconds,14.9652,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-04 00:00:00 UTC,2026-11-05 00:00:00 UTC,86400,bytes,97.7694,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-04 00:00:00 UTC,2026-11-05 00:00:00 UTC,86400,seconds,36.9595,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-04 00:00:00 UTC,2026-11-05 00:00:00 UTC,86400,seconds,44.7919,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-05 00:00:00 UTC,2026-11-06 00:00:00 UTC,86400,seconds,49.4483,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-05 00:00:00 UTC,2026-11-06 00:00:00 UTC,86400,seconds,50.978,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-05 00:00:00 UTC,2026-11-06 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-05 00:00:00 UTC,2026-11-06 00:00:00 UTC,86400,byte-seconds,15.4757,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-05 00:00:00 UTC,2026-11-06 00:00:00 UTC,86400,bytes,107.5166,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-05 00:00:00 UTC,2026-11-06 00:00:00 UTC,86400,seconds,37.7048,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-05 00:00:00 UTC,2026-11-06 00:00:00 UTC,86400,seconds,42.3816,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-06 00:00:00 UTC,2026-11-07 00:00:00 UTC,86400,seconds,49.7683,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-06 00:00:00 UTC,2026-11-07 00:00:00 UTC,86400,seconds,49.4153,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-06 00:00:00 UTC,2026-11-07 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-06 00:00:00 UTC,2026-11-07 00:00:00 UTC,86400,byte-seconds,15.3461,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-06 00:00:00 UTC,2026-11-07 00:00:00 UTC,86400,bytes,99.4212,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-06 00:00:00 UTC,2026-11-07 00:00:00 UTC,86400,seconds,37.2907,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-06 00:00:00 UTC,2026-11-07 00:00:00 UTC,86400,seconds,45.6764,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-07 00:00:00 UTC,2026-11-08 00:00:00 UTC,86400,seconds,42.5961,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-07 00:00:00 UTC,2026-11-08 00:00:00 UTC,86400,seconds,43.6622,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-07 00:00:00 UTC,2026-11-08 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-07 00:00:00 UTC,2026-11-08 00:00:00 UTC,86400,byte-seconds,13.0728,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-07 00:00:00 UTC,2026-11-08 00:00:00 UTC,86400,bytes,85.6261,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-07 00:00:00 UTC,2026-11-08 00:00:00 UTC,86400,seconds,33.8922,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-07 00:00:00 UTC,2026-11-08 00:00:00 UTC,86400,seconds,36.0643,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-08 00:00:00 UTC,2026-11-09 00:00:00 UTC,86400,seconds,44.3348,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-08 00:00:00 UTC,2026-11-09 00:00:00 UTC,86400,seconds,40.411,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-08 00:00:00 UTC,2026-11-09 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-08 00:00:00 UTC,2026-11-09 00:00:00 UTC,86400,byte-seconds,12.9413,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-08 00:00:00 UTC,2026-11-09 00:00:00 UTC,86400,bytes,89.2381,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-08 00:00:00 UTC,2026-11-09 00:00:00 UTC,86400,seconds,33.0185,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-08 00:00:00 UTC,2026-11-09 00:00:00 UTC,86400,seconds,37.879,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-09 00:00:00 UTC,2026-11-10 00:00:00 UTC,86400,seconds,50.1871,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-09 00:00:00 UTC,2026-11-10 00:00:00 UTC,86400,seconds,49.5585,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-09 00:00:00 UTC,2026-11-10 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-09 00:00:00 UTC,2026-11-10 00:00:00 UTC,86400,byte-seconds,15.2798,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-09 00:00:00 UTC,2026-11-10 00:00:00 UTC,86400,bytes,110.5147,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-09 00:00:00 UTC,2026-11-10 00:00:00 UTC,86400,seconds,36.4294,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-09 00:00:00 UTC,2026-11-10 00:00:00 UTC,86400,seconds,42.242,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-10 00:00:00 UTC,2026-11-11 00:00:00 UTC,86400,seconds,53.3127,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-10 00:00:00 UTC,2026-11-11 00:00:00 UTC,86400,seconds,50.4479,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-10 00:00:00 UTC,2026-11-11 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-10 00:00:00 UTC,2026-11-11 00:00:00 UTC,86400,byte-seconds,14.826,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-10 00:00:00 UTC,2026-11-11 00:00:00 UTC,86400,bytes,112.7327,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-10 00:00:00 UTC,2026-11-11 00:00:00 UTC,86400,seconds,37.2951,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-10 00:00:00 UTC,2026-11-11 00:00:00 UTC,86400,seconds,42.4153,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-11 00:00:00 UTC,2026-11-12 00:00:00 UTC,86400,seconds,50.8402,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-11 00:00:00 UTC,2026-11-12 00:00:00 UTC,86400,seconds,47.9212,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-11 00:00:00 UTC,2026-11-12 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-11 00:00:00 UTC,2026-11-12 00:00:00 UTC,86400,byte-seconds,15.0801,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-11 00:00:00 UTC,2026-11-12 00:00:00 UTC,86400,bytes,109.9073,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-11 00:00:00 UTC,2026-11-12 00:00:00 UTC,86400,seconds,38.4089,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-11 00:00:00 UTC,2026-11-12 00:00:00 UTC,86400,seconds,45.2275,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-12 00:00:00 UTC,2026-11-13 00:00:00 UTC,86400,seconds,52.9905,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-12 00:00:00 UTC,2026-11-13 00:00:00 UTC,86400,seconds,51.7395,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-12 00:00:00 UTC,2026-11-13 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-12 00:00:00 UTC,2026-11-13 00:00:00 UTC,86400,byte-seconds,15.2376,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-12 00:00:00 UTC,2026-11-13 00:00:00 UTC,86400,bytes,107.7272,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-12 00:00:00 UTC,2026-11-13 00:00:00 UTC,86400,seconds,38.0674,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-12 00:00:00 UTC,2026-11-13 00:00:00 UTC,86400,seconds,44.0419,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-13 00:00:00 UTC,2026-11-14 00:00:00 UTC,86400,seconds,53.2888,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-13 00:00:00 UTC,2026-11-14 00:00:00 UTC,86400,seconds,48.9777,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-13 00:00:00 UTC,2026-11-14 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-13 00:00:00 UTC,2026-11-14 00:00:00 UTC,86400,byte-seconds,14.3319,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-13 00:00:00 UTC,2026-11-14 00:00:00 UTC,86400,bytes,115.4233,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-13 00:00:00 UTC,2026-11-14 00:00:00 UTC,86400,seconds,39.7278,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-13 00:00:00 UTC,2026-11-14 00:00:00 UTC,86400,seconds,43.9775,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-14 00:00:00 UTC,2026-11-15 00:00:00 UTC,86400,seconds,42.4883,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-14 00:00:00 UTC,2026-11-15 00:00:00 UTC,86400,seconds,42.4982,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-14 00:00:00 UTC,2026-11-15 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-14 00:00:00 UTC,2026-11-15 00:00:00 UTC,86400,byte-seconds,12.8698,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-14 00:00:00 UTC,2026-11-15 00:00:00 UTC,86400,bytes,95.5684,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-14 00:00:00 UTC,2026-11-15 00:00:00 UTC,86400,seconds,33.843,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-14 00:00:00 UTC,2026-11-15 00:00:00 UTC,86400,seconds,39.2209,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-15 00:00:00 UTC,2026-11-16 00:00:00 UTC,86400,seconds,46.1179,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-15 00:00:00 UTC,2026-11-16 00:00:00 UTC,86400,seconds,40.9359,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-15 00:00:00 UTC,2026-11-16 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-15 00:00:00 UTC,2026-11-16 00:00:00 UTC,86400,byte-seconds,13.21,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-15 00:00:00 UTC,2026-11-16 00:00:00 UTC,86400,bytes,96.91,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-15 00:00:00 UTC,2026-11-16 00:00:00 UTC,86400,seconds,31.8653,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-15 00:00:00 UTC,2026-11-16 00:00:00 UTC,86400,seconds,38.0842,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-1,us-central1,2026-11-16 00:00:00 UTC,2026-11-17 00:00:00 UTC,86400,seconds,53.3662,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Compute Engine,projects/acme-web-prod/zones/us-central1-a/instances/web-2,us-central1,2026-11-16 00:00:00 UTC,2026-11-17 00:00:00 UTC,86400,seconds,52.2723,USD
+01ABCD-234EFG-567HIJ,acme-data,Compute Engine,projects/acme-data/zones/europe-west1-b/instances/etl-old,europe-west1,2026-11-16 00:00:00 UTC,2026-11-17 00:00:00 UTC,86400,byte-seconds,4.1,USD
+01ABCD-234EFG-567HIJ,acme-data,Cloud Storage,projects/_/buckets/acme-data-lake,europe-west1,2026-11-16 00:00:00 UTC,2026-11-17 00:00:00 UTC,86400,byte-seconds,15.4056,USD
+01ABCD-234EFG-567HIJ,acme-data,BigQuery,,europe-west1,2026-11-16 00:00:00 UTC,2026-11-17 00:00:00 UTC,86400,bytes,108.8422,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Cloud SQL,projects/acme-web-prod/instances/app-db,us-central1,2026-11-16 00:00:00 UTC,2026-11-17 00:00:00 UTC,86400,seconds,36.3566,USD
+01ABCD-234EFG-567HIJ,acme-web-prod,Kubernetes Engine,projects/acme-web-prod/locations/us-central1/clusters/prod-gke,us-central1,2026-11-16 00:00:00 UTC,2026-11-17 00:00:00 UTC,86400,seconds,42.9536,USD

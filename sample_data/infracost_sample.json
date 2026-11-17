@@ -1,0 +1,71 @@
+{
+  "version": "0.2",
+  "currency": "USD",
+  "projects": [
+    {
+      "name": "infra/terraform",
+      "breakdown": {
+        "resources": [
+          {
+            "name": "aws_instance.web",
+            "resourceType": "aws_instance",
+            "monthlyCost": "67.74",
+            "costComponents": [
+              {
+                "name": "Instance usage (Linux/UNIX, on-demand, t3.large)",
+                "unit": "hours",
+                "monthlyQuantity": "730",
+                "price": "0.0832",
+                "monthlyCost": "60.74"
+              },
+              {
+                "name": "Storage (general purpose SSD, gp3)",
+                "unit": "GB",
+                "monthlyQuantity": "87.5",
+                "price": "0.08",
+                "monthlyCost": "7.00"
+              }
+            ]
+          },
+          {
+            "name": "aws_db_instance.orders",
+            "resourceType": "aws_db_instance",
+            "monthlyCost": "136.80",
+            "costComponents": [
+              {
+                "name": "Database instance (on-demand, Single-AZ, db.t3.large)",
+                "unit": "hours",
+                "monthlyQuantity": "730",
+                "price": "0.156",
+                "monthlyCost": "113.88"
+              },
+              {
+                "name": "Storage (general purpose SSD, gp3)",
+                "unit": "GB",
+                "monthlyQuantity": "199.3",
+                "price": "0.115",
+                "monthlyCost": "22.92"
+              }
+            ]
+          },
+          {
+            "name": "aws_s3_bucket.assets",
+            "resourceType": "aws_s3_bucket",
+            "monthlyCost": null,
+            "costComponents": [
+              {
+                "name": "Storage (standard)",
+                "unit": "GB",
+                "monthlyQuantity": null,
+                "price": "0.023",
+                "monthlyCost": null
+              }
+            ]
+          }
+        ],
+        "totalMonthlyCost": "204.54"
+      }
+    }
+  ],
+  "totalMonthlyCost": "204.54"
+}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Sign in · CloudCost AI{% endblock %}
+{% block auth %}
+<h1>Sign in</h1>
+<p class="muted">One view of AWS, Azure and Google Cloud spend.</p>
+<form method="post">
+  {% csrf_token %}
+  {% include "_form.html" %}
+  <input type="hidden" name="next" value="{{ next }}">
+  <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+</form>
+<p class="muted small">No account? <a href="{% url 'signup' %}">Create one</a></p>
+{% endblock %}

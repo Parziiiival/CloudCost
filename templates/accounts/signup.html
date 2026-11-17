@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Create account · CloudCost AI{% endblock %}
+{% block auth %}
+<h1>Create account</h1>
+<p class="muted">Your billing data is visible only to you.</p>
+<form method="post">
+  {% csrf_token %}
+  {% include "_form.html" %}
+  <button class="btn btn-primary btn-block" type="submit">Create account</button>
+</form>
+<p class="muted small">Already registered? <a href="{% url 'login' %}">Sign in</a></p>
+{% endblock %}

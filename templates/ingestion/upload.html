@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Upload billing CSV · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head"><div><h1>Upload billing CSV</h1></div></header>
+<section class="card narrow">
+  {% if not has_accounts %}
+    <div class="empty">
+      <h2>Add a cloud account first</h2>
+      <p class="muted">An import is attached to a cloud account so the right provider format is used.</p>
+      <p><a class="btn btn-primary" href="{% url 'cloud_account_add' %}">Add account</a></p>
+    </div>
+  {% else %}
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {% include "_form.html" %}
+      <p class="help">CSV only, up to {{ limit_mb }} MB. The format (AWS Cost and Usage, Azure cost export, or Google Cloud billing export) is chosen from the account's provider. Rows already imported are skipped, so re-uploading a file never double-counts.</p>
+      <button class="btn btn-primary" type="submit">Import</button>
+      <a class="btn" href="{% url 'imports' %}">Cancel</a>
+    </form>
+  {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load cc_extras %}
+{% block title %}Resources · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Resources</h1>
+    <p class="muted">Inventory from CloudQuery (read-only). Cost is billed cost matched by resource ID, {{ start|date:"j M" }} – {{ end|date:"j M Y" }}.</p>
+  </div>
+  <a class="btn btn-primary" href="{% url 'resources_import' %}">Import inventory</a>
+</header>
+<section class="card">
+  {% if resources %}
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Resource</th><th>Type</th><th>Provider</th><th>Region</th><th>Status</th><th class="num">Cost in period</th><th>Last seen</th></tr></thead>
+        <tbody>
+          {% for resource in resources %}
+            <tr>
+              <td>{{ resource.resource_name|default:"—" }}<br><span class="mono muted small">{{ resource.resource_id }}</span></td>
+              <td>{{ resource.resource_type }}</td>
+              <td><span class="swatch {{ resource.provider }}"></span>{{ resource.provider|provider_label }}</td>
+              <td>{{ resource.region|default:"—" }}</td>
+              <td>{{ resource.status|default:"—" }}</td>
+              <td class="num">{% if resource.cost_30d != None %}{{ resource.cost_30d|money }}{% else %}<span class="muted">no billed cost</span>{% endif %}</td>
+              <td>{{ resource.last_seen_at|date:"j M Y" }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="empty">
+      <h2>No inventory yet</h2>
+      <p class="muted">Import a CloudQuery JSON export to match resources with their billed cost and to enable idle-resource recommendations.</p>
+    </div>
+  {% endif %}
+</section>
+{% endblock %}

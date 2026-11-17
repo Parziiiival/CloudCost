@@ -1,0 +1,19 @@
+# Optional Grafana datasource pointing at the CloudCost AI PostgreSQL database.
+# Grafana sees every user's rows, so treat it as an operator tool: for anything
+# beyond local use, give it a dedicated read-only database role.
+apiVersion: 1
+
+datasources:
+  - name: CloudCost
+    type: postgres
+    access: proxy
+    url: db:5432
+    user: cloudcost
+    secureJsonData:
+      password: $CLOUDCOST_DB_PASSWORD
+    jsonData:
+      database: cloudcost
+      sslmode: disable
+      postgresVersion: 1600
+    isDefault: true
+    editable: false

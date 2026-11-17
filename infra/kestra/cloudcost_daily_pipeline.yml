@@ -1,0 +1,34 @@
+# Kestra flow: run the CloudCost AI analysis pipeline once a day.
+#
+# The pipeline only reads billing data already imported into the database and
+# writes anomalies, a forecast and recommendations back to it. It never
+# contacts or changes any cloud resource.
+#
+# Import it in the Kestra UI (Flows -> Create) or via the API. It expects the
+# app image built by `docker compose build web` and the ENV_* variables that
+# docker-compose.yml passes to the kestra service.
+id: cloudcost_daily_pipeline
+namespace: cloudcost
+
+description: Detect cost anomalies, refresh the forecast and regenerate recommendations.
+
+tasks:
+  - id: run_pipeline
+    type: io.kestra.plugin.scripts.shell.Commands
+    taskRunner:
+      type: io.kestra.plugin.scripts.runner.docker.Docker
+      networkMode: cloudcost-ai_default
+      pullPolicy: NEVER
+    containerImage: cloudcost-ai:local
+    env:
+      DATABASE_URL: "{{ envs.database_url }}"
+      DJANGO_SECRET_KEY: "{{ envs.django_secret_key }}"
+      DJANGO_DEBUG: "false"
+    commands:
+      - cd /app && python manage.py run_pipeline
+
+triggers:
+  - id: daily
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 6 * * *"
+    timezone: UTC

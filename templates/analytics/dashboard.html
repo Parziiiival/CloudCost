@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% load static cc_extras %}
+{% block title %}Dashboard · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Dashboard</h1>
+    <p class="muted">Actual billed cost, converted to USD · {{ filters.start|date:"j M Y" }} – {{ filters.end|date:"j M Y" }}</p>
+  </div>
+  {% if has_data %}<a class="btn" href="{% url 'report_summary' %}?{{ query }}">Printable summary</a>{% endif %}
+</header>
+
+{% if not has_data %}
+  <div class="card empty">
+    <h2>No billing data yet</h2>
+    <p class="muted">Add a cloud account, then upload a billing CSV export from AWS, Azure or Google Cloud.</p>
+    <p><a class="btn btn-primary" href="{% url 'cloud_accounts' %}">Add a cloud account</a>
+       <a class="btn" href="{% url 'import_upload' %}">Upload billing CSV</a></p>
+  </div>
+{% else %}
+  <form class="filters" method="get">
+    {% include "_filters.html" %}
+    <button class="btn btn-primary" type="submit">Apply</button>
+    <a class="btn" href="{% url 'dashboard' %}">Reset</a>
+  </form>
+
+  {% if unconverted %}
+    <p class="notice warning">⚠ Some rows are excluded because no exchange rate to USD is configured:
+      {% for currency, rows in unconverted.items %}{{ rows }} row{{ rows|pluralize }} in {{ currency }}{% if not forloop.last %}, {% endif %}{% endfor %}.
+      Amounts in different currencies are never added together without conversion.</p>
+  {% endif %}
+
+  <section class="kpis">
+    <div class="kpi">
+      <p class="kpi-label">Total spend</p>
+      <p class="kpi-value">{{ total|money }}</p>
+      <p class="kpi-sub">selected period</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">vs previous period</p>
+      {% if comparison and comparison.change_pct != None %}
+        <p class="kpi-value">{% if comparison.change > 0 %}▲{% elif comparison.change < 0 %}▼{% endif %} {{ comparison.change_pct|floatformat:1 }}%</p>
+        <p class="kpi-sub">{{ comparison.previous|money }} in the {{ comparison.days }} days before</p>
+      {% else %}
+        <p class="kpi-value">—</p>
+        <p class="kpi-sub">no earlier data to compare</p>
+      {% endif %}
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">Next 30 days (forecast)</p>
+      {% if forecast %}
+        <p class="kpi-value">{{ forecast.predicted_cost|money }}</p>
+        <p class="kpi-sub">likely {{ forecast.lower_bound|money }} – {{ forecast.upper_bound|money }} · <a href="{% url 'forecast' %}">details</a></p>
+      {% else %}
+        <p class="kpi-value">—</p>
+        <p class="kpi-sub"><a href="{% url 'forecast' %}">not enough history yet</a></p>
+      {% endif %}
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">Open anomalies</p>
+      <p class="kpi-value">{{ open_anomalies }}</p>
+      <p class="kpi-sub"><a href="{% url 'anomalies' %}?status=open">review</a></p>
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">Potential monthly savings</p>
+      <p class="kpi-value">{{ potential_savings|money }}</p>
+      <p class="kpi-sub">{{ open_recommendations }} open recommendation{{ open_recommendations|pluralize }} · <a href="{% url 'recommendations' %}">review</a></p>
+    </div>
+  </section>
+
+  {% if period_empty %}
+    <div class="card empty">
+      <h2>No costs match these filters</h2>
+      <p class="muted">Try a wider date range or clear the provider, service and project filters.</p>
+    </div>
+  {% else %}
+    <section class="card">
+      <h2>Daily cost by provider</h2>
+      <div class="chart tall"><canvas id="chart-daily" role="img" aria-label="Stacked bar chart of daily cost by provider"></canvas></div>
+      <details>
+        <summary>View as table</summary>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Date</th>{% for label in daily_providers %}<th class="num">{{ label }}</th>{% endfor %}<th class="num">Total</th></tr></thead>
+            <tbody>
+              {% for row in daily_rows %}
+                <tr><td>{{ row.date }}</td>{% for value in row.values %}<td class="num">{{ value|money }}</td>{% endfor %}<td class="num">{{ row.total|money }}</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <div class="grid-2">
+      <section class="card">
+        <h2>Cost by provider</h2>
+        <div class="chart short"><canvas id="chart-providers" role="img" aria-label="Bar chart of cost by provider"></canvas></div>
+        <table>
+          <thead><tr><th>Provider</th><th class="num">Cost</th><th class="num">Share</th></tr></thead>
+          <tbody>
+            {% for row in by_provider %}
+              <tr><td><span class="swatch {{ row.label }}"></span>{{ row.label|provider_label }}</td>
+                  <td class="num">{{ row.cost|money }}</td>
+                  <td class="num">{% if row.share != None %}{{ row.share }}%{% else %}—{% endif %}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+      <section class="card">
+        <h2>Top services</h2>
+        <div class="chart"><canvas id="chart-services" role="img" aria-label="Bar chart of the highest-cost services"></canvas></div>
+      </section>
+      <section class="card">
+        <h2>Cost by region</h2>
+        <div class="chart"><canvas id="chart-regions" role="img" aria-label="Bar chart of cost by region"></canvas></div>
+      </section>
+      <section class="card">
+        <h2>Cost by project</h2>
+        <div class="chart"><canvas id="chart-projects" role="img" aria-label="Bar chart of cost by project or subscription"></canvas></div>
+      </section>
+    </div>
+
+    <section class="card">
+      <h2>Top resources</h2>
+      {% if top_resources %}
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Resource</th><th>Provider</th><th>Service</th><th class="num">Cost</th></tr></thead>
+            <tbody>
+              {% for row in top_resources %}
+                <tr><td class="mono">{{ row.resource_id }}</td>
+                    <td><span class="swatch {{ row.provider }}"></span>{{ row.provider|provider_label }}</td>
+                    <td>{{ row.service }}</td><td class="num">{{ row.cost|money }}</td></tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p class="muted">No resource-level costs in this period.</p>
+      {% endif %}
+    </section>
+  {% endif %}
+
+  <section class="card">
+    <h2>Monthly trend <span class="muted small">all imported history, same provider/service/project filters</span></h2>
+    <div class="chart"><canvas id="chart-monthly" role="img" aria-label="Stacked bar chart of monthly cost by provider"></canvas></div>
+  </section>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if has_data %}
+{{ charts|json_script:"charts-data" }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="{% static 'js/charts.js' %}"></script>
+<script>
+  (function () {
+    var d = CCCharts.data('charts-data');
+    CCCharts.register(function () {
+      return [
+        CCCharts.stackedProviders('chart-daily', d.daily),
+        CCCharts.stackedProviders('chart-monthly', d.monthly),
+        CCCharts.hbar('chart-providers', d.providers, {providerColors: true}),
+        CCCharts.hbar('chart-services', d.services),
+        CCCharts.hbar('chart-regions', d.regions),
+        CCCharts.hbar('chart-projects', d.projects)
+      ];
+    });
+  })();
+</script>
+{% endif %}
+{% endblock %}

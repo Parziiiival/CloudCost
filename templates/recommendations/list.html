@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load cc_extras %}
+{% block title %}Recommendations · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Recommendations</h1>
+    <p class="muted">Rule-based suggestions with the evidence behind them. CloudCost AI is read-only: it never stops, resizes or deletes anything. You decide, and make any change yourself.</p>
+  </div>
+  <a class="btn" href="{% url 'report_recommendations_csv' %}">Export CSV</a>
+</header>
+<section class="kpis">
+  <div class="kpi">
+    <p class="kpi-label">Potential monthly savings (open)</p>
+    <p class="kpi-value">{{ open_savings|money }}</p>
+    <p class="kpi-sub">only where the data supports a figure</p>
+  </div>
+</section>
+<nav class="tabs" aria-label="Filter by status">
+  <a href="{% url 'recommendations' %}" {% if not status %}class="active"{% endif %}>All ({{ total }})</a>
+  {% for value, label in statuses %}
+    <a href="{% url 'recommendations' %}?status={{ value }}" {% if status == value %}class="active"{% endif %}>{{ label }}</a>
+  {% endfor %}
+</nav>
+{% for rec in recommendations %}
+  <article class="card item">
+    <div class="item-head">
+      <div>
+        <h2>{{ rec.title }}</h2>
+        <p class="muted small">{{ rec.get_category_display }}</p>
+      </div>
+      <span class="badge st-{{ rec.status }}">{{ rec.get_status_display }}</span>
+    </div>
+    <p>{{ rec.explanation }}</p>
+    {% if rec.estimated_savings != None %}
+      <p><strong>Estimated saving:</strong> {{ rec.estimated_savings|money:rec.currency }} per month <span class="badge">estimate</span></p>
+    {% else %}
+      <p class="muted small">No savings figure is shown because the data does not support one.</p>
+    {% endif %}
+    {% if rec.evidence %}
+      <details>
+        <summary>Evidence</summary>
+        <dl class="evidence">
+          {% for key, value in rec.evidence.items %}
+            <div><dt>{{ key|pretty_key }}</dt><dd>{{ value|pretty_value }}</dd></div>
+          {% endfor %}
+        </dl>
+      </details>
+    {% endif %}
+    {% if rec.ai_explanation %}
+      <div class="ai-note">
+        <p class="muted small">AI-written explanation (Gemini). All figures come from the evidence above.</p>
+        <p>{{ rec.ai_explanation|linebreaksbr }}</p>
+      </div>
+    {% endif %}
+    <form class="inline-form" method="post" action="{% url 'recommendation_status' rec.pk %}">
+      {% csrf_token %}
+      <label>Decision
+        <select name="status">
+          {% for value, label in statuses %}<option value="{{ value }}" {% if rec.status == value %}selected{% endif %}>{{ label }}</option>{% endfor %}
+        </select>
+      </label>
+      <label class="grow">Review note
+        <input type="text" name="review_note" maxlength="300" value="{{ rec.review_note }}" placeholder="Optional">
+      </label>
+      <button class="btn" type="submit">Save</button>
+    </form>
+    {% if ai_enabled and not rec.ai_explanation %}
+      <form class="inline-form" method="post" action="{% url 'recommendation_explain' rec.pk %}">
+        {% csrf_token %}
+        <button class="btn" type="submit">Explain with AI</button>
+        <span class="muted small">Sends this recommendation's evidence to the Gemini API.</span>
+      </form>
+    {% endif %}
+  </article>
+{% empty %}
+  <div class="card empty">
+    <h2>{% if total %}Nothing with this status{% else %}No recommendations yet{% endif %}</h2>
+    <p class="muted">{% if total %}Choose another tab to see the rest.{% else %}Import billing data and a resource inventory, then refresh the analysis.{% endif %}</p>
+  </div>
+{% endfor %}
+{% endblock %}

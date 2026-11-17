@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load cc_extras %}
+{% block title %}Anomalies · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Anomalies</h1>
+    <p class="muted">Days where a service cost far more than its recent pattern. An anomaly is a prompt to look, not proof of an error or misuse.</p>
+  </div>
+  <a class="btn" href="{% url 'report_anomalies_csv' %}">Export CSV</a>
+</header>
+<nav class="tabs" aria-label="Filter by status">
+  <a href="{% url 'anomalies' %}" {% if not status %}class="active"{% endif %}>All ({{ total }})</a>
+  {% for value, label in statuses %}
+    <a href="{% url 'anomalies' %}?status={{ value }}" {% if status == value %}class="active"{% endif %}>{{ label }}</a>
+  {% endfor %}
+</nav>
+{% for anomaly in anomalies %}
+  <article class="card item">
+    <div class="item-head">
+      <div>
+        <h2><span class="swatch {{ anomaly.provider }}"></span>{{ anomaly.provider|provider_label }} · {{ anomaly.service }}</h2>
+        <p class="muted small">{{ anomaly.usage_date|date:"l j M Y" }}</p>
+      </div>
+      <span class="badge st-{{ anomaly.status }}">{{ anomaly.get_status_display }}</span>
+    </div>
+    <dl class="facts">
+      <div><dt>Observed</dt><dd>{{ anomaly.observed_cost|money:anomaly.currency }}</dd></div>
+      <div><dt>Expected</dt><dd>{{ anomaly.expected_cost|money:anomaly.currency }}</dd></div>
+      <div><dt>Difference</dt><dd>{{ anomaly.deviation|money:anomaly.currency }}{% if anomaly.deviation_pct != None %} ({{ anomaly.deviation_pct|floatformat:0 }}%){% endif %}</dd></div>
+    </dl>
+    <p><strong>Why this was flagged:</strong> {{ anomaly.explanation }}</p>
+    <form class="inline-form" method="post" action="{% url 'anomaly_status' anomaly.pk %}">
+      {% csrf_token %}
+      <label>Status
+        <select name="status">
+          {% for value, label in statuses %}<option value="{{ value }}" {% if anomaly.status == value %}selected{% endif %}>{{ label }}</option>{% endfor %}
+        </select>
+      </label>
+      <button class="btn" type="submit">Update</button>
+    </form>
+  </article>
+{% empty %}
+  <div class="card empty">
+    <h2>{% if total %}Nothing with this status{% else %}No anomalies detected{% endif %}</h2>
+    <p class="muted">{% if total %}Choose another tab to see the rest.{% else %}Spend looks consistent with its recent pattern, or there is not enough history yet to judge.{% endif %}</p>
+  </div>
+{% endfor %}
+{% endblock %}

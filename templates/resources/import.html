@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Import inventory · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head"><div><h1>Import resource inventory</h1></div></header>
+<section class="card narrow">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% include "_form.html" %}
+    <p class="help">A JSON array or JSON-lines file produced by a CloudQuery sync. Inventory describes what exists; it is not billing data. A sample is in <span class="mono">sample_data/cloudquery_resources.json</span>.</p>
+    <button class="btn btn-primary" type="submit">Import</button>
+    <a class="btn" href="{% url 'resources' %}">Cancel</a>
+  </form>
+</section>
+{% endblock %}

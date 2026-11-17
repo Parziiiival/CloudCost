@@ -1,0 +1,22 @@
+# Secrets and local config - never commit
+.env
+*.pem
+*.key
+credentials*.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local data
+db.sqlite3
+staticfiles/
+media/
+
+# Tooling
+.claude/
+.infracost/
+.terraform/
+*.tfstate*
+cloudquery-output/

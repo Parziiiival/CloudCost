@@ -1,0 +1,63 @@
+{% load static %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}CloudCost AI{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+{% with name=request.resolver_match.url_name %}
+{% if user.is_authenticated %}
+<div class="shell">
+  <aside class="sidebar">
+    <a class="brand" href="{% url 'dashboard' %}">CloudCost <span>AI</span></a>
+    <nav>
+      <p class="nav-group">Costs</p>
+      <a href="{% url 'dashboard' %}" {% if name == 'dashboard' %}class="active"{% endif %}>Dashboard</a>
+      <a href="{% url 'forecast' %}" {% if name == 'forecast' %}class="active"{% endif %}>Forecast</a>
+      <a href="{% url 'anomalies' %}" {% if name == 'anomalies' %}class="active"{% endif %}>Anomalies</a>
+      <a href="{% url 'recommendations' %}" {% if name == 'recommendations' %}class="active"{% endif %}>Recommendations</a>
+      <a href="{% url 'reports' %}" {% if name == 'reports' or name == 'report_summary' %}class="active"{% endif %}>Reports</a>
+      <p class="nav-group">Data</p>
+      <a href="{% url 'cloud_accounts' %}" {% if name == 'cloud_accounts' or name == 'cloud_account_add' %}class="active"{% endif %}>Cloud accounts</a>
+      <a href="{% url 'imports' %}" {% if name == 'imports' or name == 'import_upload' or name == 'import_detail' %}class="active"{% endif %}>Billing imports</a>
+      <a href="{% url 'resources' %}" {% if name == 'resources' or name == 'resources_import' %}class="active"{% endif %}>Resources</a>
+      <a href="{% url 'estimates' %}" {% if name == 'estimates' or name == 'estimate_upload' or name == 'estimate_detail' %}class="active"{% endif %}>Terraform estimates</a>
+    </nav>
+    <div class="sidebar-foot">
+      <form method="post" action="{% url 'pipeline_run' %}">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <button class="btn btn-block" type="submit">Refresh analysis</button>
+      </form>
+      <p class="whoami">Signed in as <strong>{{ user.username }}</strong></p>
+      <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button class="link-btn" type="submit">Sign out</button>
+      </form>
+    </div>
+  </aside>
+  <main class="main">
+    {% if messages %}
+      <div class="messages">
+        {% for message in messages %}
+          <p class="message {{ message.tags }}" role="status">{% if message.tags == 'error' %}⚠{% else %}✓{% endif %} {{ message }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+</div>
+{% else %}
+<main class="auth">
+  <a class="brand" href="{% url 'login' %}">CloudCost <span>AI</span></a>
+  <div class="card auth-card">
+    {% block auth %}{% endblock %}
+  </div>
+</main>
+{% endif %}
+{% endwith %}
+{% block scripts %}{% endblock %}
+</body>
+</html>

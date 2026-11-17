@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load cc_extras %}
+{% block title %}Terraform estimates · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Terraform estimates</h1>
+    <p class="muted">Infracost estimates of planned infrastructure. These are estimates, kept separate from actual billed cost and never added to it.</p>
+  </div>
+  <a class="btn btn-primary" href="{% url 'estimate_upload' %}">Upload estimate</a>
+</header>
+<section class="card">
+  {% if estimates %}
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Name</th><th>Source file</th><th class="num">Estimated monthly cost</th><th>Uploaded</th></tr></thead>
+        <tbody>
+          {% for estimate in estimates %}
+            <tr>
+              <td><a href="{% url 'estimate_detail' estimate.pk %}">{{ estimate.name }}</a></td>
+              <td class="mono">{{ estimate.source_file }}</td>
+              <td class="num">{{ estimate.total_monthly_cost|money:estimate.currency }} <span class="badge">estimate</span></td>
+              <td>{{ estimate.created_at|date:"j M Y" }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="empty">
+      <h2>No estimates yet</h2>
+      <p class="muted">Run <span class="mono">infracost breakdown --path . --format json</span> on a Terraform project and upload the output.</p>
+    </div>
+  {% endif %}
+</section>
+{% endblock %}

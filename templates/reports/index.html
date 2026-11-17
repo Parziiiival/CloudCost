@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Reports · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Reports</h1>
+    <p class="muted">Export what you see on the dashboard.</p>
+  </div>
+</header>
+<section class="card">
+  <h2>Cost report</h2>
+  <form class="filters" method="get" action="{% url 'report_summary' %}">
+    {% include "_filters.html" %}
+    <button class="btn btn-primary" type="submit">Printable summary</button>
+    <button class="btn" type="submit" formaction="{% url 'report_costs_csv' %}">Download costs CSV</button>
+  </form>
+  <p class="muted small">The CSV has one row per day, provider, service, region and project, in USD.</p>
+</section>
+<section class="card">
+  <h2>Other exports</h2>
+  <p><a class="btn" href="{% url 'report_anomalies_csv' %}">Anomalies CSV</a>
+     <a class="btn" href="{% url 'report_recommendations_csv' %}">Recommendations CSV</a></p>
+</section>
+{% endblock %}

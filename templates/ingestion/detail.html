@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block title %}Import {{ job.source_file }} · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>{{ job.source_file }}</h1>
+    <p class="muted">{{ job.cloud_account }} · {{ job.created_at|date:"j M Y H:i" }} UTC ·
+      <span class="badge job-{{ job.status }}">{{ job.get_status_display }}</span></p>
+  </div>
+  <a class="btn" href="{% url 'imports' %}">All imports</a>
+</header>
+
+{% if job.error_message %}<p class="notice critical">⚠ {{ job.error_message }}</p>{% endif %}
+
+<section class="kpis">
+  <div class="kpi"><p class="kpi-label">Rows imported</p><p class="kpi-value">{{ job.records_imported|intcomma }}</p></div>
+  <div class="kpi"><p class="kpi-label">Duplicates skipped</p><p class="kpi-value">{{ job.records_duplicate|intcomma }}</p><p class="kpi-sub">already imported earlier</p></div>
+  <div class="kpi"><p class="kpi-label">Rows rejected</p><p class="kpi-value">{{ job.records_rejected|intcomma }}</p><p class="kpi-sub">failed validation</p></div>
+</section>
+
+{% if job.error_log %}
+  <section class="card">
+    <h2>Rejected rows</h2>
+    <p class="muted small">Showing up to the first recorded problems. Fix these rows in the source file and upload again; rows that already imported will be skipped.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th class="num">Row</th><th>Reason</th></tr></thead>
+        <tbody>
+          {% for entry in job.error_log %}<tr><td class="num">{{ entry.row }}</td><td>{{ entry.reason }}</td></tr>{% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endif %}
+
+{% if job.records_imported %}
+  <p><a class="btn btn-primary" href="{% url 'dashboard' %}">View dashboard</a></p>
+{% endif %}
+{% endblock %}

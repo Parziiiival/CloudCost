@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load static cc_extras %}
+{% block title %}Forecast · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Forecast</h1>
+    <p class="muted">A simple baseline projection of total daily cost (USD) for the next 30 days.</p>
+  </div>
+</header>
+
+{% if unconverted %}
+  <p class="notice warning">⚠ Rows in currencies without a USD exchange rate are excluded from the forecast.</p>
+{% endif %}
+
+{% if result.status == "no_data" %}
+  <div class="card empty">
+    <h2>No billing data yet</h2>
+    <p class="muted">Import billing data to see a forecast.</p>
+    <p><a class="btn btn-primary" href="{% url 'import_upload' %}">Upload billing CSV</a></p>
+  </div>
+{% elif result.status == "insufficient_history" %}
+  <div class="card empty">
+    <h2>Not enough history to forecast</h2>
+    <p class="muted">{{ result.message }}</p>
+    <p class="muted small">{{ result.history_days }} day{{ result.history_days|pluralize }} of cost data available.</p>
+  </div>
+{% else %}
+  <section class="kpis">
+    <div class="kpi">
+      <p class="kpi-label">Predicted, next 30 days</p>
+      <p class="kpi-value">{{ result.predicted|money }}</p>
+      <p class="kpi-sub">{{ result.period }}</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">Likely range</p>
+      <p class="kpi-value">{{ result.lower|money }} – {{ result.upper|money }}</p>
+      <p class="kpi-sub">based on past forecast error</p>
+    </div>
+    <div class="kpi">
+      <p class="kpi-label">Method</p>
+      <p class="kpi-value small-value">{{ result.model_label }}</p>
+      <p class="kpi-sub">typical daily error {{ result.backtest_mae|money }} · {{ result.history_days }} days of history</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Daily cost: history and forecast</h2>
+    <div class="chart tall"><canvas id="chart-forecast" role="img" aria-label="Line chart of daily cost history with a 30 day forecast and its likely range"></canvas></div>
+    <details>
+      <summary>View forecast as table</summary>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Date</th><th class="num">Predicted</th><th class="num">Low</th><th class="num">High</th></tr></thead>
+          <tbody>
+            {% for day in result.daily %}
+              <tr><td>{{ day.date }}</td><td class="num">{{ day.predicted|money }}</td><td class="num">{{ day.lower|money }}</td><td class="num">{{ day.upper|money }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>Limitations</h2>
+    <ul class="notes">
+      {% for note in result.notes %}<li>{{ note }}</li>{% endfor %}
+      <li>This is an estimate, not a commitment. It cannot foresee new deployments, price changes or one-off events.</li>
+    </ul>
+    {% if result.created_at %}<p class="muted small">Calculated {{ result.created_at|date:"j M Y H:i" }} UTC. Use “Refresh analysis” to recalculate.</p>{% endif %}
+  </section>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if result.status == "ok" %}
+{{ payload|json_script:"forecast-data" }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="{% static 'js/charts.js' %}"></script>
+<script>
+  CCCharts.register(function () {
+    return [CCCharts.forecast('chart-forecast', CCCharts.data('forecast-data'))];
+  });
+</script>
+{% endif %}
+{% endblock %}

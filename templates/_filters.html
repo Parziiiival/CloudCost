@@ -1,0 +1,30 @@
+<label>Provider
+  <select name="provider">
+    <option value="">All providers</option>
+    {% for value, label in providers %}
+      <option value="{{ value }}" {% if filters.provider == value %}selected{% endif %}>{{ label }}</option>
+    {% endfor %}
+  </select>
+</label>
+<label>Service
+  <select name="service">
+    <option value="">All services</option>
+    {% for service in options.services %}
+      <option value="{{ service }}" {% if filters.service == service %}selected{% endif %}>{{ service }}</option>
+    {% endfor %}
+  </select>
+</label>
+<label>Project
+  <select name="project">
+    <option value="">All projects</option>
+    {% for project in options.projects %}
+      <option value="{{ project }}" {% if filters.project == project %}selected{% endif %}>{{ project }}</option>
+    {% endfor %}
+  </select>
+</label>
+<label>From
+  <input type="date" name="start" value="{{ filters.start|date:'Y-m-d' }}">
+</label>
+<label>To
+  <input type="date" name="end" value="{{ filters.end|date:'Y-m-d' }}">
+</label>

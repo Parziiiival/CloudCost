@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% load cc_extras %}
+{% block title %}Cost summary · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Cost summary</h1>
+    <p class="muted">{{ filters.start|date:"j M Y" }} – {{ filters.end|date:"j M Y" }}
+      {% if filters.provider %} · {{ filters.provider|provider_label }}{% endif %}
+      {% if filters.service %} · {{ filters.service }}{% endif %}
+      {% if filters.project %} · {{ filters.project }}{% endif %}
+      · generated {{ generated_at|date:"j M Y H:i" }} UTC</p>
+  </div>
+  <button class="btn btn-primary no-print" type="button" onclick="window.print()">Print or save as PDF</button>
+</header>
+
+{% if unconverted %}
+  <p class="notice warning">⚠ Rows in currencies without a USD exchange rate are excluded:
+    {% for currency, rows in unconverted.items %}{{ rows }} in {{ currency }}{% if not forloop.last %}, {% endif %}{% endfor %}.</p>
+{% endif %}
+
+{% if empty %}
+  <div class="card empty"><h2>No costs in this period</h2><p class="muted">Change the filters on the Reports page.</p></div>
+{% else %}
+  <section class="kpis">
+    <div class="kpi"><p class="kpi-label">Total actual cost</p><p class="kpi-value">{{ total|money }}</p></div>
+    <div class="kpi">
+      <p class="kpi-label">vs previous period</p>
+      {% if comparison and comparison.change_pct != None %}
+        <p class="kpi-value">{% if comparison.change > 0 %}▲{% elif comparison.change < 0 %}▼{% endif %} {{ comparison.change_pct|floatformat:1 }}%</p>
+        <p class="kpi-sub">{{ comparison.previous|money }} before</p>
+      {% else %}<p class="kpi-value">—</p>{% endif %}
+    </div>
+    {% if forecast %}
+      <div class="kpi"><p class="kpi-label">Forecast, next 30 days</p><p class="kpi-value">{{ forecast.predicted_cost|money }}</p>
+        <p class="kpi-sub">likely {{ forecast.lower_bound|money }} – {{ forecast.upper_bound|money }}</p></div>
+    {% endif %}
+  </section>
+
+  <div class="grid-2">
+    <section class="card">
+      <h2>By provider</h2>
+      <table>
+        <thead><tr><th>Provider</th><th class="num">Cost</th><th class="num">Share</th></tr></thead>
+        <tbody>{% for row in by_provider %}<tr><td>{{ row.label|provider_label }}</td><td class="num">{{ row.cost|money }}</td><td class="num">{% if row.share != None %}{{ row.share }}%{% else %}—{% endif %}</td></tr>{% endfor %}</tbody>
+      </table>
+    </section>
+    <section class="card">
+      <h2>By project</h2>
+      <table>
+        <thead><tr><th>Project</th><th class="num">Cost</th></tr></thead>
+        <tbody>{% for row in by_project %}<tr><td>{{ row.label }}</td><td class="num">{{ row.cost|money }}</td></tr>{% endfor %}</tbody>
+      </table>
+    </section>
+    <section class="card">
+      <h2>Top services</h2>
+      <table>
+        <thead><tr><th>Service</th><th class="num">Cost</th></tr></thead>
+        <tbody>{% for row in by_service %}<tr><td>{{ row.label }}</td><td class="num">{{ row.cost|money }}</td></tr>{% endfor %}</tbody>
+      </table>
+    </section>
+    <section class="card">
+      <h2>Top resources</h2>
+      <table>
+        <thead><tr><th>Resource</th><th class="num">Cost</th></tr></thead>
+        <tbody>{% for row in top_resources %}<tr><td class="mono">{{ row.resource_id }}</td><td class="num">{{ row.cost|money }}</td></tr>{% empty %}<tr><td colspan="2" class="muted">No resource-level costs.</td></tr>{% endfor %}</tbody>
+      </table>
+    </section>
+  </div>
+{% endif %}
+
+<section class="card">
+  <h2>Anomalies in this period</h2>
+  {% if anomalies %}
+    <table>
+      <thead><tr><th>Date</th><th>Service</th><th class="num">Observed</th><th class="num">Expected</th><th>Status</th></tr></thead>
+      <tbody>{% for a in anomalies %}<tr><td>{{ a.usage_date|date:"j M Y" }}</td><td>{{ a.provider|provider_label }} · {{ a.service }}</td><td class="num">{{ a.observed_cost|money:a.currency }}</td><td class="num">{{ a.expected_cost|money:a.currency }}</td><td><span class="badge st-{{ a.status }}">{{ a.get_status_display }}</span></td></tr>{% endfor %}</tbody>
+    </table>
+  {% else %}<p class="muted">None detected.</p>{% endif %}
+</section>
+
+<section class="card">
+  <h2>Open recommendations</h2>
+  {% if recommendations %}
+    <table>
+      <thead><tr><th>Recommendation</th><th class="num">Est. monthly saving</th></tr></thead>
+      <tbody>{% for r in recommendations %}<tr><td>{{ r.title }}</td><td class="num">{{ r.estimated_savings|money:r.currency }}</td></tr>{% endfor %}</tbody>
+    </table>
+    <p class="muted small">Savings are estimates and need human review before any change is made.</p>
+  {% else %}<p class="muted">None open.</p>{% endif %}
+</section>
+
+{% if estimates %}
+  <section class="card">
+    <h2>Terraform estimates <span class="badge">estimate</span></h2>
+    <table>
+      <thead><tr><th>Name</th><th class="num">Estimated monthly cost</th></tr></thead>
+      <tbody>{% for e in estimates %}<tr><td>{{ e.name }}</td><td class="num">{{ e.total_monthly_cost|money:e.currency }}</td></tr>{% endfor %}</tbody>
+    </table>
+    <p class="muted small">Planned infrastructure only. Not included in any actual cost figure above.</p>
+  </section>
+{% endif %}
+{% endblock %}

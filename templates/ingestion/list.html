@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% block title %}Billing imports · CloudCost AI{% endblock %}
+{% block content %}
+<header class="page-head">
+  <div>
+    <h1>Billing imports</h1>
+    <p class="muted">Each CSV export is validated, normalised to a common schema and de-duplicated.</p>
+  </div>
+  <a class="btn btn-primary" href="{% url 'import_upload' %}">Upload billing CSV</a>
+</header>
+<section class="card">
+  {% if jobs %}
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>File</th><th>Account</th><th>Status</th><th class="num">Imported</th><th class="num">Duplicates</th><th class="num">Rejected</th><th>When</th></tr></thead>
+        <tbody>
+          {% for job in jobs %}
+            <tr>
+              <td><a href="{% url 'import_detail' job.pk %}">{{ job.source_file }}</a></td>
+              <td>{{ job.cloud_account }}</td>
+              <td><span class="badge job-{{ job.status }}">{{ job.get_status_display }}</span></td>
+              <td class="num">{{ job.records_imported|intcomma }}</td>
+              <td class="num">{{ job.records_duplicate|intcomma }}</td>
+              <td class="num">{{ job.records_rejected|intcomma }}</td>
+              <td>{{ job.created_at|date:"j M Y H:i" }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="empty">
+      <h2>No imports yet</h2>
+      <p class="muted">Upload a billing export to get started. Sample files are in the project's <span class="mono">sample_data</span> folder.</p>
+    </div>
+  {% endif %}
+</section>
+{% endblock %}
